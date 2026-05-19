@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ====================================================
+   PREMIUM CORPORATE VALUE BANNER SECTION STYLE
+   ==================================================== */
+.corporate-value-section {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 120px 0;
+  box-sizing: border-box;
+}
+
+/* Background Image Wrapper with Precise Layout and Gradients */
+.value-section-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: left 25% center; /* Position corporate women beautifully to the left */
+  z-index: 1;
+}
+
+.value-section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 
+     A rich dual-purpose gradient:
+     - Maintains visibility of the professional team photo on the left.
+     - Darkens beautifully towards the right to make the white text highly readable.
+  */
+  background: linear-gradient(
+    90deg, 
+    rgba(0, 0, 0, 0.35) 0%, 
+    rgba(0, 0, 0, 0.7) 45%, 
+    rgba(3, 7, 18, 0.9) 70%,
+    rgba(3, 7, 18, 0.98) 100%
+  );
+  z-index: 2;
+}
+
+.value-section-lines {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 320px;
+  height: 320px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Section Container */
+.value-section-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end; /* Right-aligns content over the dark gradient zone */
+  box-sizing: border-box;
+}
+
+.value-section-content {
+  max-width: 580px; /* Precise layout control for reading line lengths */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+/* Typography matching the premium corporate styling */
+.value-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: -2.2px;
+  line-height: 1.05;
+  color: #ffffff;
+  margin: 0;
+}
+
+.value-section-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+}
+
+.value-section-action {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* KNOW MORE sharp rectangle button */
+.value-know-more-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 16px 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0; /* Pure rectangle as requested */
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.value-know-more-btn:hover {
+  background: #00f2fe; /* Cyber neon cyan theme color */
+  color: #030712;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+}
+
+.value-know-more-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .value-section-container {
+    padding: 0 40px;
+    justify-content: center; /* Center-align on tablets and small screens */
+  }
+  .value-section-content {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .value-section-action {
+    justify-content: center;
+  }
+  .value-section-title {
+    font-size: 44px;
+  }
+  .value-section-overlay {
+    background: rgba(3, 7, 18, 0.75); /* Darker uniform overlay for full legibility */
+  }
+}
+
+@media (max-width: 768px) {
+  .corporate-value-section {
+    padding: 80px 0;
+    min-height: 480px;
+  }
+  .value-section-title {
+    font-size: 36px;
+  }
+  .value-section-subtitle {
+    font-size: 16px;
+  }
+}
