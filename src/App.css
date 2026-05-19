@@ -416,6 +416,37 @@
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+.home-hero-callout {
+  padding: 4rem 20px 2rem;
+  background: linear-gradient(180deg, #2d24df 0%, #211fe9 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.home-hero-callout-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.home-hero-callout .hero-giant-title {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(4.5rem, 4.8vw, 5.75rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin: 0 auto;
+  max-width: 1080px;
+  text-shadow: none;
+}
+
+.home-hero-callout .hero-description {
+  margin: 1.25rem auto 0;
+  max-width: 760px;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+}
+
 /* CTAs */
 .hero-action-buttons {
   display: flex;

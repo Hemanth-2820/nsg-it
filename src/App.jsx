@@ -338,6 +338,14 @@ function App() {
           </div>
         </div>
       </main>
+
+      {/* HOMEPAGE CALLOUT SECTION */}
+      <section className="home-hero-callout">
+        <div className="home-hero-callout-inner">
+          <h2 className="hero-giant-title">Empower Your Business with Access to World-Class Products, Services, and Solutions</h2>
+          <p className="hero-description">We cover your connected IT ecosystem.</p>
+        </div>
+      </section>
       
       {/* SERVICES CARD DECK SECTION */}
       <ServicesCardSection />
