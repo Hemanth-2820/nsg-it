@@ -1,54 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
 /* ====================================================
-   PREMIUM CORPORATE VALUE BANNER SECTION STYLE
+   PREMIUM INTERACTIVE 4-COLUMN ACCORDION SECTION
    ==================================================== */
 .corporate-value-section {
   position: relative;
   width: 100%;
-  min-height: 540px;
-  display: flex;
-  align-items: center;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
-  padding: 120px 0;
   box-sizing: border-box;
 }
 
-/* Background Image Wrapper with Precise Layout and Gradients */
-.value-section-bg-wrapper {
+
+
+.corporate-value-accordion {
+  display: flex;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #030712;
+}
+
+/* Individual Column Block */
+.value-block {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: flex 0.75s cubic-bezier(0.25, 1, 0.3, 1);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.value-block:last-child {
+  border-right: none;
+}
+
+/* Background Image layer with slow zoom animation */
+.block-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
-  background-position: left 25% center; /* Position corporate women beautifully to the left */
+  background-position: center;
   z-index: 1;
+  transition: filter 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.25, 1, 0.3, 1);
+  transform: scale(1.02);
 }
 
-.value-section-overlay {
+/* Inactive Block: Blurred and Darkened background image */
+.value-block:not(.active) .block-bg {
+  filter: blur(8px) brightness(0.4) saturate(0.8);
+  transform: scale(1.0);
+}
+
+/* Active Block: Expanded, Crisp, and slightly zoomed */
+.value-block.active {
+  flex: 3;
+  cursor: default;
+}
+
+.value-block.active .block-bg {
+  filter: blur(0px) brightness(0.95) saturate(1.2);
+  transform: scale(1.08);
+}
+
+/* Specific theme gradients for active state */
+.block-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* 
-     A rich dual-purpose gradient:
-     - Maintains visibility of the professional team photo on the left.
-     - Darkens beautifully towards the right to make the white text highly readable.
-  */
-  background: linear-gradient(
-    90deg, 
-    rgba(0, 0, 0, 0.35) 0%, 
-    rgba(0, 0, 0, 0.7) 45%, 
-    rgba(3, 7, 18, 0.9) 70%,
-    rgba(3, 7, 18, 0.98) 100%
-  );
   z-index: 2;
+  transition: background 0.8s ease;
 }
 
-.value-section-lines {
+/* Inactive Overlay: Simple dark tint */
+.value-block:not(.active) .block-overlay {
+  background: rgba(3, 7, 18, 0.5);
+}
+
+/* Theme Gradients */
+.theme-purpose.active .block-overlay {
+  background: linear-gradient(180deg, rgba(0, 242, 254, 0.25) 0%, rgba(3, 7, 18, 0.85) 80%);
+}
+
+.theme-promise.active .block-overlay {
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0.25) 0%, rgba(3, 7, 18, 0.85) 80%);
+}
+
+.theme-mission.active .block-overlay {
+  background: linear-gradient(180deg, rgba(170, 59, 255, 0.25) 0%, rgba(3, 7, 18, 0.85) 80%);
+}
+
+.theme-values.active .block-overlay {
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.25) 0%, rgba(3, 7, 18, 0.85) 80%);
+}
+
+/* Grid lines overlay for the premium high-tech Mahindra look */
+.block-lines {
   position: absolute;
   bottom: -40px;
   right: -40px;
@@ -56,64 +111,146 @@
   height: 320px;
   background: repeating-linear-gradient(
     45deg,
-    rgba(255, 255, 255, 0.03),
-    rgba(255, 255, 255, 0.03) 1px,
+    rgba(255, 255, 255, 0.035),
+    rgba(255, 255, 255, 0.035) 1px,
     transparent 1px,
     transparent 8px
   );
   z-index: 3;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
-/* Section Container */
-.value-section-container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 80px;
+.value-block.active .block-lines {
+  opacity: 1;
+}
+
+/* Block Content Wrapper */
+.block-content {
   position: relative;
   z-index: 5;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: flex-end; /* Right-aligns content over the dark gradient zone */
+  flex-direction: column;
   box-sizing: border-box;
 }
 
-.value-section-content {
-  max-width: 580px; /* Precise layout control for reading line lengths */
+/* Inactive Centered Title view */
+.block-inactive-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.value-block.active .block-inactive-view {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
+
+.block-inactive-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease;
+}
+
+.value-block:hover:not(.active) .block-inactive-title {
+  color: #ffffff;
+}
+
+/* Active Expanded Content view */
+.block-active-view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 80px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-end;
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.3, 1) 0.15s,
+              transform 0.6s cubic-bezier(0.25, 1, 0.3, 1) 0.15s;
 }
 
-/* Typography matching the premium corporate styling */
-.value-section-title {
+.value-block.active .block-active-view {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Logo and Branding at Top Left of Active block */
+.block-active-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.block-active-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.block-active-brand {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 72px;
-  font-weight: 700;
-  letter-spacing: -2.2px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.block-active-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -2px;
   line-height: 1.05;
   color: #ffffff;
-  margin: 0;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
 }
 
-.value-section-subtitle {
+.block-active-desc {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 20px;
+  font-size: 1.15rem;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.95);
-  margin: 0 0 12px 0;
-  letter-spacing: -0.3px;
+  max-width: 650px;
+  margin: 0 0 30px 0;
 }
 
-.value-section-action {
+.block-active-action {
   display: flex;
   justify-content: flex-start;
 }
 
-/* KNOW MORE sharp rectangle button */
-.value-know-more-btn {
+/* KNOW MORE sharp rectangle button with customized theme hover color */
+.block-active-btn {
   display: inline-block;
   background: #ffffff;
   color: #000000;
@@ -123,54 +260,95 @@
   padding: 16px 36px;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 0; /* Pure rectangle as requested */
+  border-radius: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.value-know-more-btn:hover {
-  background: #00f2fe; /* Cyber neon cyan theme color */
-  color: #030712;
+.block-active-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-color);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.block-active-btn:hover {
+  color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
 }
 
-.value-know-more-btn:active {
+.block-active-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.block-active-btn:active {
   transform: translateY(-1px);
 }
 
-/* Responsive adjustments */
+/* ====================================================
+   RESPONSIVE ACCORDION LAYOUT (VERTICAL STACK)
+   ==================================================== */
 @media (max-width: 1024px) {
-  .value-section-container {
-    padding: 0 40px;
-    justify-content: center; /* Center-align on tablets and small screens */
+
+  .block-active-view {
+    padding: 40px;
   }
-  .value-section-content {
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  .value-section-action {
-    justify-content: center;
-  }
-  .value-section-title {
+  .block-active-title {
     font-size: 44px;
-  }
-  .value-section-overlay {
-    background: rgba(3, 7, 18, 0.75); /* Darker uniform overlay for full legibility */
   }
 }
 
 @media (max-width: 768px) {
-  .corporate-value-section {
-    padding: 80px 0;
-    min-height: 480px;
+
+  .corporate-value-accordion {
+    flex-direction: column;
+    height: 850px;
   }
-  .value-section-title {
-    font-size: 36px;
+  .value-block {
+    flex: 1;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
-  .value-section-subtitle {
-    font-size: 16px;
+  .value-block:last-child {
+    border-bottom: none;
+  }
+  .value-block.active {
+    flex: 3.5;
+  }
+  .block-inactive-title {
+    font-size: 22px;
+  }
+  .block-active-view {
+    padding: 30px;
+  }
+  .block-active-logo-group {
+    margin-bottom: 15px;
+  }
+  .block-active-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .block-active-title {
+    font-size: 32px;
+  }
+  .block-active-desc {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .block-active-btn {
+    padding: 12px 28px;
+    font-size: 12px;
   }
 }

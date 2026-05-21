@@ -1,0 +1,355 @@
+/* ====================================================
+   SUPERCHARGE YOUR CAREER WITH US - 4-COLUMN PREMIUM GRID
+   ==================================================== */
+.careers-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 5%;
+  background-color: #dbe4f6; /* Exact light lavender-blue / pastel purple-blue background */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Stunning neon glowing radial backdrop auras - disabled for high contrast on light background */
+.careers-glow-teal {
+  display: none;
+}
+
+.careers-glow-pink {
+  display: none;
+}
+
+.careers-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  box-sizing: border-box;
+}
+
+/* 
+   EXACT HCLTECH ASYMMETRIC GRID GEOMETRY:
+   - CSS Grid 4-column layout on desktop.
+   - Column 1 and Column 4 are tall, flanking columns 2 & 3.
+   - Header is placed in Row 1, spanning columns 2 & 3.
+   - Columns 2 & 3 sit in Row 2, directly under the header.
+*/
+.careers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 380px;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Centered Header Text Block spanning columns 2 and 3 in the first row */
+.careers-header-block {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+/* Grid Column Placements */
+.careers-col {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.careers-col-1 {
+  grid-column: 1;
+  grid-row: 1 / 3; /* Spans both rows for the tall look */
+  height: 580px; /* Exact tall height alignment */
+}
+
+.careers-col-2 {
+  grid-column: 2;
+  grid-row: 2;
+  height: 380px;
+}
+
+.careers-col-3 {
+  grid-column: 3;
+  grid-row: 2;
+  height: 380px;
+}
+
+.careers-col-4 {
+  grid-column: 4;
+  grid-row: 1 / 3; /* Spans both rows for the tall look */
+  height: 580px; /* Exact tall height alignment */
+}
+
+/* Individual Card Styles */
+.careers-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #0c101d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: box-shadow 0.5s cubic-bezier(0.25, 1, 0.3, 1), 
+              transform 0.5s cubic-bezier(0.25, 1, 0.3, 1),
+              border-color 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+/* Dynamic custom shadows and border colors on hover matching generated neon lighting */
+.careers-col-1 .careers-card {
+  box-shadow: 0 12px 40px rgba(0, 242, 254, 0.08);
+}
+.careers-col-1 .careers-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0, 242, 254, 0.3);
+  border-color: rgba(0, 242, 254, 0.5);
+}
+
+.careers-col-2 .careers-card {
+  box-shadow: 0 12px 40px rgba(170, 59, 255, 0.08);
+}
+.careers-col-2 .careers-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(170, 59, 255, 0.3);
+  border-color: rgba(170, 59, 255, 0.5);
+}
+
+.careers-col-3 .careers-card {
+  box-shadow: 0 12px 40px rgba(255, 184, 0, 0.08);
+}
+.careers-col-3 .careers-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(255, 184, 0, 0.3);
+  border-color: rgba(255, 184, 0, 0.5);
+}
+
+.careers-col-4 .careers-card {
+  box-shadow: 0 12px 40px rgba(255, 45, 85, 0.08);
+}
+.careers-col-4 .careers-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(255, 45, 85, 0.3);
+  border-color: rgba(255, 45, 85, 0.5);
+}
+
+/* Card images */
+.careers-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 8s cubic-bezier(0.25, 1, 0.3, 1);
+  filter: brightness(1.05) saturate(1.15); /* Vivid and extremely bright */
+}
+
+.careers-card:hover .careers-card-img {
+  transform: scale(1.05);
+}
+
+/* Glassmorphic card details tag and dark vignette gradients */
+.careers-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 16px;
+  background: linear-gradient(to top, rgba(3, 7, 18, 0.85) 0%, rgba(3, 7, 18, 0) 100%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.careers-card-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.careers-card:hover .careers-card-tag {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+/* Centered Header Text Typography - High contrast for light background */
+.careers-main-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  color: #0c101d; /* Deep premium navy/slate */
+  margin: 0;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+}
+
+.careers-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.6;
+  color: #334155; /* Refined slate for clear readability */
+  margin: 0;
+}
+
+/* Action button at bottom */
+.careers-action {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.careers-btn {
+  position: relative;
+  display: inline-block;
+  background: #0c101d; /* Deep slate background for stark premium contrast */
+  color: #ffffff; /* White text */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 16px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease;
+}
+
+.careers-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000; /* Red sweep transition */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.careers-btn:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+}
+
+.careers-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.careers-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ====================================================
+   RESPONSIVE DESIGN (CSS GRID ADAPTATION)
+   ==================================================== */
+@media (max-width: 1024px) {
+  .careers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 24px;
+  }
+  
+  .careers-header-block {
+    grid-column: span 2;
+    grid-row: 1;
+    padding: 0 0 20px 0;
+  }
+  
+  .careers-col-1 {
+    grid-column: 1;
+    grid-row: 2;
+    height: 450px;
+  }
+  
+  .careers-col-2 {
+    grid-column: 2;
+    grid-row: 2;
+    height: 450px;
+  }
+  
+  .careers-col-3 {
+    grid-column: 1;
+    grid-row: 3;
+    height: 450px;
+  }
+  
+  .careers-col-4 {
+    grid-column: 2;
+    grid-row: 3;
+    height: 450px;
+  }
+}
+
+@media (max-width: 640px) {
+  .careers-section {
+    padding: 60px 20px;
+  }
+  
+  .careers-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  
+  .careers-header-block {
+    grid-column: span 1;
+    grid-row: 1;
+    padding: 0 0 10px 0;
+  }
+  
+  .careers-col-1 {
+    grid-column: 1;
+    grid-row: 2;
+    height: 360px;
+  }
+  
+  .careers-col-2 {
+    grid-column: 1;
+    grid-row: 3;
+    height: 360px;
+  }
+  
+  .careers-col-3 {
+    grid-column: 1;
+    grid-row: 4;
+    height: 360px;
+  }
+  
+  .careers-col-4 {
+    grid-column: 1;
+    grid-row: 5;
+    height: 360px;
+  }
+}

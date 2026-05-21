@@ -4,6 +4,8 @@ import CanvasBackground from './components/CanvasBackground';
 import SlideControl from './components/SlideControl';
 import TechShowcase from './components/TechShowcase';
 import CorporateValueSection from './components/CorporateValueSection';
+import LimitlessTogether from './components/LimitlessTogether';
+import CareersSection from './components/CareersSection';
 import ServicesCardSection from './components/ServicesCardSection';
 import DigitalJourneyShowcase from './components/DigitalJourneyShowcase';
 import SuccessStories from './components/SuccessStories';
@@ -20,6 +22,7 @@ import themeEcommerceImg from './assets/theme_ecommerce.png';
 import themeAiAutomationImg from './assets/theme_ai_automation.png';
 import themeSecurityImg from './assets/theme_security.png';
 import { Cpu, Database, Cloud, Brain, Shield, Radio, RefreshCw, Layers, Lock, Activity, Sparkles } from 'lucide-react';
+import ServiceDetailPage from './components/ServiceDetailPage';
 import './App.css';
 
 // 12 Slides Configuration based on company services
@@ -134,12 +137,28 @@ const slides = [
   }
 ];
 
+const serviceAccentColors = [
+  "#D946EF", // web-dev
+  "#F59E0B", // app-dev
+  "#06B6D4", // software-dev
+  "#F97316", // aws-devops
+  "#3B82F6", // hosting
+  "#22C55E", // marketing
+  "#8B5CF6", // ai-rag
+  "#DB2777", // ivr
+  "#14B8A6", // api-integrations
+  "#EF4444", // ecommerce
+  "#6366F1", // ai-automation
+  "#E11D48"  // security
+];
+
 function App() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [targetIdx, setTargetIdx] = useState(0);
   const [transitionState, setTransitionState] = useState('idle'); // 'idle' | 'exiting' | 'entering'
   const [isPlaying, setIsPlaying] = useState(true);
   const [slideProgress, setSlideProgress] = useState(0);
+  const [activeServicePage, setActiveServicePage] = useState(null);
   
   // Slide settings
   const [transitionStyle, setTransitionStyle] = useState('Slide Left');
@@ -301,63 +320,84 @@ function App() {
 
   return (
     <div className="app-workspace">
-      {/* GLOWING AMBIENT AURAS */}
-      <div className="ambient-glow aura-cyan"></div>
-      <div className="ambient-glow aura-purple"></div>
-
       {/* NAVBAR */}
-      <Navbar />
+      <Navbar 
+        onSelectService={(idx) => setActiveServicePage(idx)} 
+        onGoHome={() => setActiveServicePage(null)} 
+        isDetailPage={activeServicePage !== null}
+        accentColor={activeServicePage !== null ? serviceAccentColors[activeServicePage] : null}
+      />
 
-      {/* HERO SECTION */}
-      <main className="hero-section-viewport" id="home" style={getSlideBackgroundStyle()}>
-        
-        {/* Background circuit overlays */}
-        <div className="background-dark-overlay"></div>
-
-        {/* Dynamic Interactive Canvas */}
-        <CanvasBackground 
-          activeSlide={transitionState === 'exiting' ? targetIdx : currentIdx} 
-          state={transitionState}
+      {activeServicePage !== null ? (
+        <ServiceDetailPage 
+          serviceIndex={activeServicePage} 
+          onBack={() => setActiveServicePage(null)} 
         />
+      ) : (
+        <>
+          {/* GLOWING AMBIENT AURAS */}
+          <div className="ambient-glow aura-cyan"></div>
+          <div className="ambient-glow aura-purple"></div>
 
-        {/* MAIN TEXT TRANSITION CONTAINER */}
-        <div className="hero-text-viewport-container">
-          <div 
-            className={`hero-slide-text-group 
-              transition-${transitionState} 
-              style-${getSlugByStyleName(transitionStyle)}`
-            }
-            style={{
-              '--transition-ms': `${transitionDuration}ms`
-            }}
-          >
-            {/* Giant Title */}
-            <h1 className="hero-giant-title">
-              {activeSlideInfo.title}
-            </h1>
-          </div>
-        </div>
-      </main>
 
-      {/* HOMEPAGE CALLOUT SECTION */}
-      <section className="home-hero-callout">
-        <div className="home-hero-callout-inner">
-          <h2 className="hero-giant-title">Empower Your Business with Access to World-Class Products, Services, and Solutions</h2>
-          <p className="hero-description">We cover your connected IT ecosystem.</p>
-        </div>
-      </section>
-      
-      {/* SERVICES CARD DECK SECTION */}
-      <ServicesCardSection />
+          {/* HERO SECTION */}
+          <main className="hero-section-viewport" id="home" style={getSlideBackgroundStyle()}>
+            
+            {/* Background circuit overlays */}
+            <div className="background-dark-overlay"></div>
 
-      {/* DIGITAL JOURNEY SHOWCASE */}
-      <DigitalJourneyShowcase />
+            {/* Dynamic Interactive Canvas */}
+            <CanvasBackground 
+              activeSlide={transitionState === 'exiting' ? targetIdx : currentIdx} 
+              state={transitionState}
+            />
 
-      {/* SUCCESS STORIES (TESTIMONIALS) */}
-      <SuccessStories />
+            {/* MAIN TEXT TRANSITION CONTAINER */}
+            <div className="hero-text-viewport-container">
+              <div 
+                className={`hero-slide-text-group 
+                  transition-${transitionState} 
+                  style-${getSlugByStyleName(transitionStyle)}`
+                }
+                style={{
+                  '--transition-ms': `${transitionDuration}ms`
+                }}
+              >
+                {/* Giant Title */}
+                <h1 className="hero-giant-title">
+                  {activeSlideInfo.title}
+                </h1>
+              </div>
+            </div>
+          </main>
 
-      {/* BRANDING VALUE SECTION */}
-      <CorporateValueSection />
+          {/* HOMEPAGE CALLOUT SECTION */}
+          <section className="home-hero-callout">
+            <div className="home-hero-callout-inner">
+              <h2 className="hero-giant-title">Empower Your Business with Access to World-Class Products, Services, and Solutions</h2>
+              <p className="hero-description">We cover your connected IT ecosystem.</p>
+            </div>
+          </section>
+          
+          {/* SERVICES CARD DECK SECTION */}
+          <ServicesCardSection onSelectService={(idx) => setActiveServicePage(idx)} />
+
+          {/* DIGITAL JOURNEY SHOWCASE */}
+          <DigitalJourneyShowcase />
+
+          {/* SUCCESS STORIES (TESTIMONIALS) */}
+          <SuccessStories />
+
+          {/* LIMITLESS TOGETHER HERO BANNER */}
+          <LimitlessTogether />
+
+          {/* BRANDING VALUE SECTION */}
+          <CorporateValueSection />
+
+          {/* SUPERCHARGE YOUR CAREER WITH US */}
+          <CareersSection />
+        </>
+      )}
     </div>
   );
 }
