@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from './Footer';
 import { ArrowUpRight } from 'lucide-react';
 import detailWebDevImg from '../assets/detail_web_dev.png';
 import detailAppDevImg from '../assets/detail_app_dev.png';
@@ -15,7 +16,7 @@ import detailSecurityImg from '../assets/detail_security.png';
 import './ServiceDetailPage.css';
 
 // Complete dataset for 12 Services with bespoke sub-services and high-speed 3D technology loop videos
-const serviceDetailsDataset = [
+export const serviceDetailsDataset = [
   {
     themeId: "web-dev",
     title: "Custom Web Development Services & Responsive Digital Flagships",
@@ -798,7 +799,7 @@ const ServiceDetailPage = ({ serviceIndex, onBack }) => {
                 {(sub.videoUrl || activeService.videoUrl) && (
                   <video 
                     className="card-hover-video"
-                    src={sub.videoUrl || activeService.videoUrl}
+                    src={(sub.videoUrl || activeService.videoUrl)?.startsWith('/') ? '.' + (sub.videoUrl || activeService.videoUrl) : (sub.videoUrl || activeService.videoUrl)}
                     loop
                     muted
                     playsInline
@@ -843,10 +844,8 @@ const ServiceDetailPage = ({ serviceIndex, onBack }) => {
         </section>
       )}
 
-      {/* FOOTER */}
-      <footer className="service-details-footer">
-        <p>© 2026 NSG IT. All Rights Reserved. Enforcing zero-trust software architectures globally.</p>
-      </footer>
+      {/* GLOBAL FOOTER */}
+      <Footer />
     </div>
   );
 };

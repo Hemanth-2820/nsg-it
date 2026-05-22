@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './LimitlessTogether.css';
 import limitlessBg from '../assets/limitless_together.png';
 
@@ -32,9 +33,9 @@ const LimitlessTogether = () => {
             NSG Solutions is a fast-growing technology and creative services company delivering high-quality, innovative, and cost-effective solutions
           </p>
           <div className="limitless-action">
-            <a href="#contact" className="limitless-btn">
+            <Link to="/contact" className="limitless-btn">
               KNOW MORE
-            </a>
+            </Link>
           </div>
         </div>
       </div>

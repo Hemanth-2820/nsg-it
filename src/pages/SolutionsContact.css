@@ -1,0 +1,684 @@
+/* ====================================================
+   SOLUTIONS DEDICATED HIGH-FIDELITY INQUIRY STYLES
+   ==================================================== */
+
+.solutions-contact-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 96px 0 0 0; /* Space for Navbar header */
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ────────────────────────────────────────────────────
+   VIBRANT TOP-ACCENT GRADIENT HERO BANNER (SCREENSHOT 2)
+   ──────────────────────────────────────────────────── */
+.solutions-contact-hero-banner {
+  width: 100%;
+  position: relative;
+  /* Exact vibrant magenta-to-purple background gradient */
+  background: linear-gradient(135deg, #c70d7f 0%, #82078f 45%, #46006e 100%);
+  padding: 60px 24px;
+  box-sizing: border-box;
+  text-align: left;
+  border-top: 6px solid #00F0FF; /* Top cyber neon color-blocked banner bar */
+}
+
+/* Add a background grid blend to make it look premium and state-of-the-art */
+.solutions-contact-hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.15) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px, 20px 20px;
+  pointer-events: none;
+}
+
+.solutions-contact-hero-content {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.solutions-contact-hero-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.solutions-contact-hero-subtitle {
+  font-size: clamp(15px, 2vw, 17.5px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 500;
+  max-width: 850px;
+}
+
+/* ────────────────────────────────────────────────────
+   TWO-COLUMN SPLIT GRID SECTION (SCREENSHOTS 3-5)
+   ──────────────────────────────────────────────────── */
+.solutions-contact-main-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 350px);
+  box-sizing: border-box;
+}
+
+/* ────────────────────────────────────────────────────
+   LEFT COLUMN: PITCH PANEL (BLACK BACKGROUND)
+   ──────────────────────────────────────────────────── */
+.solutions-contact-left-pitch {
+  background-color: #030303; /* Deep solid pitch black background */
+  color: #ffffff;
+  padding: 85px 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end; /* Align content nicely with the central split */
+}
+
+.pitch-content-container {
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pitch-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.pitch-small-eyebrow {
+  font-size: 14.5px;
+  color: #94a3b8;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+}
+
+.pitch-giant-highlight {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.pitch-white-text {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Elegant thin custom divider line */
+.pitch-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+  margin: 45px 0;
+}
+
+/* ────────────────────────────────────────────────────
+   RIGHT COLUMN: FORM CARD (WHITE BACKGROUND)
+   ──────────────────────────────────────────────────── */
+.solutions-contact-right-form-container {
+  background-color: #ffffff;
+  padding: 85px 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-card-wrapper {
+  max-width: 560px;
+  width: 100%;
+}
+
+.solutions-form-success-banner {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 4px;
+  padding: 16px 20px;
+  color: #166534;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.solutions-contact-minimal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 34px; /* Spacious gaps matching Softeq design */
+  width: 100%;
+}
+
+/* Form Row for 2-column input splits */
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  width: 100%;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+/* Premium Floating-style minimalist labels */
+.minimal-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #747883;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+/* Minimal bottom-border only input slots */
+.minimal-input {
+  border: none;
+  border-bottom: 1px solid #bbbdc3;
+  background-color: transparent;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #0f172a;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease;
+}
+
+.minimal-input:hover {
+  border-bottom-color: #747883;
+}
+
+.minimal-input:focus {
+  border-bottom-color: #00A8FF; /* Bright blue focus bottom line from screenshots */
+}
+
+/* Custom Select Dropdowns */
+.custom-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.minimal-select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-bottom: 1px solid #bbbdc3;
+  background-color: transparent;
+  padding: 12px 30px 10px 0;
+  font-size: 16px;
+  color: #0f172a;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: border-color 0.25s ease;
+}
+
+.minimal-select:hover {
+  border-bottom-color: #747883;
+}
+
+.minimal-select:focus {
+  border-bottom-color: #00A8FF;
+}
+
+.select-caret-icon {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  font-size: 10px;
+  color: #747883;
+  pointer-events: none;
+}
+
+/* Custom Phone Selector widget */
+.custom-phone-selector-container {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+  gap: 8px;
+}
+
+.phone-country-trigger-box {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.phone-dropdown-trigger-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #bbbdc3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 4px;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  font-size: 15px;
+  color: #0f172a;
+  font-weight: 600;
+  transition: border-color 0.25s ease;
+}
+
+.phone-dropdown-trigger-btn:hover {
+  border-bottom-color: #747883;
+}
+
+.trigger-flag {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.trigger-code {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.trigger-caret {
+  font-size: 8px;
+  color: #747883;
+}
+
+.phone-dropdown-options-list {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 6px;
+  padding: 6px 0;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 250px;
+  max-height: 240px;
+  overflow-y: auto;
+  list-style: none;
+  text-align: left;
+}
+
+.phone-dropdown-option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.15s ease;
+  color: #334155;
+}
+
+.phone-dropdown-option-item:hover {
+  background-color: #f1f5f9;
+}
+
+.phone-dropdown-option-item.active {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.option-flag {
+  font-size: 18px;
+}
+
+.option-name {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.option-dial {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.phone-input-number-box {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Inline Dial code overlay sitting directly inside bottom-bordered input */
+.dial-prefix-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 11px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  pointer-events: none;
+}
+
+.phone-number-input-field {
+  padding-left: 50px; /* Shift input text dynamically past dial code */
+}
+
+/* Minimal Textarea Box */
+.minimal-textarea {
+  border: none;
+  border-bottom: 1px solid #bbbdc3;
+  background-color: transparent;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #0f172a;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  min-height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease;
+}
+
+.minimal-textarea::placeholder {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.minimal-textarea:hover {
+  border-bottom-color: #747883;
+}
+
+.minimal-textarea:focus {
+  border-bottom-color: #00A8FF;
+}
+
+/* ────────────────────────────────────────────────────
+   MOCK GOOGLE RECAPTCHA BADGE (SCREENSHOT 4/5)
+   ──────────────────────────────────────────────────── */
+.mock-recaptcha-widget {
+  border: 1px solid #d3d3d3;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 290px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.recaptcha-left-sec {
+  display: flex;
+  align-items: center;
+}
+
+.recaptcha-blue-label {
+  font-family: 'Roboto', 'Inter', sans-serif;
+  font-size: 12px;
+  color: #1a73e8; /* reCAPTCHA exact Blue branding color */
+  font-weight: 500;
+}
+
+.recaptcha-right-sec {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recaptcha-logo-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.recaptcha-refresh-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.recaptcha-refresh-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.recaptcha-refresh-icon:hover {
+  transform: rotate(30deg);
+}
+
+/* ────────────────────────────────────────────────────
+   POLICY AGREEMENT CHECKBOX & TEXT
+   ──────────────────────────────────────────────────── */
+.solutions-policy-agreement-group {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.custom-checkbox-styled-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+}
+
+.custom-form-checkbox-input {
+  width: 19px;
+  height: 19px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: #00A8FF; /* Focus color matching submit */
+}
+
+.checkbox-text-body {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #334155;
+  text-align: left;
+}
+
+.policy-bold-link {
+  font-weight: 700;
+  color: #0c101d;
+  text-decoration: underline;
+}
+
+/* ────────────────────────────────────────────────────
+   SUBMIT BUTTON (SCREENSHOT 5)
+   ──────────────────────────────────────────────────── */
+.solutions-submit-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* Rectangular, sharp high-fidelity submit button */
+.solutions-form-submit-action-btn {
+  background-color: #00A8FF; /* Vibrant sky blue from the screenshot submit block */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 3px; /* Minimal edge round */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 168, 255, 0.2);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.1s ease;
+  outline: none;
+}
+
+.solutions-form-submit-action-btn:hover:not(:disabled) {
+  background-color: #0093e0;
+  box-shadow: 0 6px 20px rgba(0, 168, 255, 0.35);
+}
+
+.solutions-form-submit-action-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.solutions-form-submit-action-btn:disabled {
+  background-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ────────────────────────────────────────────────────
+   FOOTER STRUCTURE
+   ──────────────────────────────────────────────────── */
+.solutions-contact-footer-block {
+  margin-top: auto;
+  border-top: 1px solid #e2e8f0;
+  padding: 40px 0;
+  background-color: #f8fafc;
+  width: 100%;
+}
+
+.solutions-contact-footer-block .footer-content {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.solutions-footer-logo {
+  height: 38px;
+  opacity: 0.9;
+}
+
+.solutions-contact-footer-block .footer-credits {
+  font-size: 13.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ====================================================
+   RESPONSIVE DESIGN SYSTEM MEDIA QUERIES
+   ==================================================== */
+
+@media (max-width: 1200px) {
+  .solutions-contact-left-pitch {
+    padding: 70px 40px;
+  }
+  
+  .solutions-contact-right-form-container {
+    padding: 70px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .solutions-contact-main-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+
+  .solutions-contact-left-pitch {
+    padding: 60px 40px;
+    justify-content: center;
+  }
+
+  .solutions-contact-right-form-container {
+    padding: 60px 40px;
+    justify-content: center;
+  }
+
+  .pitch-content-container {
+    max-width: 600px;
+  }
+
+  .form-card-wrapper {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-contact-page-wrapper {
+    padding-top: 80px;
+  }
+
+  .solutions-contact-hero-banner {
+    padding: 45px 20px;
+  }
+
+  .solutions-contact-left-pitch {
+    padding: 45px 20px;
+  }
+
+  .solutions-contact-right-form-container {
+    padding: 45px 20px;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr; /* Stack row inputs vertically on mobile */
+    gap: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .solutions-contact-hero-title {
+    font-size: 24px;
+  }
+
+  .trigger-code {
+    display: none; /* Hide country code letters on narrow viewports to save space */
+  }
+
+  .checkbox-text-body {
+    font-size: 13.5px;
+  }
+
+  .solutions-form-submit-action-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

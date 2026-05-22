@@ -1,0 +1,458 @@
+/* ====================================================
+   KPMG-STYLE LIGHT CONTACT PAGE
+   ==================================================== */
+
+.kpmg-contact-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 130px 0 0 0; /* Space for sticky header */
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kpmg-contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+/* Page Header */
+.kpmg-contact-header {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.kpmg-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #0c101d;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.kpmg-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* Success Banner */
+.kpmg-alert-success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: #15803d;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* KPMG Form Elements */
+.kpmg-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.kpmg-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.kpmg-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.kpmg-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0c101d;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.asterisk {
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+/* Custom Standard Controls */
+.kpmg-input,
+.kpmg-textarea {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: #0c101d;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.kpmg-input:hover,
+.kpmg-textarea:hover {
+  border-color: #94a3b8;
+}
+
+.kpmg-input:focus,
+.kpmg-textarea:focus {
+  border-color: #00338d;
+  box-shadow: 0 0 0 3px rgba(0, 51, 141, 0.1);
+}
+
+/* Select wrapper and control */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.kpmg-select {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 12px 40px 12px 16px;
+  color: #00338d; /* Blue text in selection box matching KPMG screenshot */
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300338d' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpmg-select:hover {
+  border-color: #94a3b8;
+}
+
+.kpmg-select:focus {
+  border-color: #00338d;
+  box-shadow: 0 0 0 3px rgba(0, 51, 141, 0.1);
+}
+
+.kpmg-select option {
+  color: #0c101d;
+  font-weight: normal;
+  background-color: #ffffff;
+}
+
+/* Message / Counter Header */
+.kpmg-message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.character-counter {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.relative-position {
+  position: relative;
+}
+
+/* Checkbox Style */
+.kpmg-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.kpmg-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+}
+
+.kpmg-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: #00338d;
+}
+
+.checkbox-text {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.kpmg-privacy-link {
+  color: #00338d;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.kpmg-privacy-link:hover {
+  color: #00225d;
+}
+
+/* Submit Action Button */
+.kpmg-submit-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.kpmg-submit-btn {
+  background-color: #00338d;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 42px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 51, 141, 0.15);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.kpmg-submit-btn:hover:not(:disabled) {
+  background-color: #00225d;
+  box-shadow: 0 6px 18px rgba(0, 51, 141, 0.25);
+}
+
+.kpmg-submit-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.kpmg-submit-btn:disabled {
+  background-color: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Footer Section */
+.kpmg-contact-footer {
+  margin-top: auto;
+  border-top: 1px solid #e2e8f0;
+  padding: 40px 0;
+  background-color: #f8fafc;
+  width: 100%;
+}
+
+.kpmg-contact-footer .footer-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.kpmg-footer-logo {
+  height: 38px;
+  opacity: 0.9;
+}
+
+.kpmg-contact-footer .footer-credits {
+  font-size: 13.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ====================================================
+   CONTACT GRID & LOCATION CARD STYLES
+   ==================================================== */
+
+.kpmg-contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.kpmg-form-column {
+  width: 100%;
+}
+
+.kpmg-location-column {
+  position: sticky;
+  top: 140px;
+  width: 100%;
+}
+
+.kpmg-location-card {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpmg-location-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.location-card-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00338d;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.location-address {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #334155;
+  margin: 0 0 24px 0;
+}
+
+.location-address strong {
+  color: #0c101d;
+  font-size: 16px;
+}
+
+.location-contact-info {
+  border-top: 1px dashed #cbd5e1;
+  border-bottom: 1px dashed #cbd5e1;
+  padding: 20px 0;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.location-contact-info p {
+  font-size: 14.5px;
+  margin: 0;
+  color: #475569;
+  display: flex;
+  align-items: baseline;
+  line-height: 1.5;
+}
+
+.location-contact-info p strong {
+  color: #0c101d;
+  min-width: 70px;
+  font-weight: 600;
+}
+
+.google-map-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.google-map-container iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+}
+
+/* ====================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ==================================================== */
+
+@media (max-width: 992px) {
+  .kpmg-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .kpmg-location-column {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .kpmg-contact-page {
+    padding-top: 110px;
+  }
+  
+  .kpmg-title {
+    font-size: 34px;
+  }
+  
+  .kpmg-form-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  
+  .kpmg-contact-footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpmg-contact-page {
+    padding-top: 100px;
+  }
+  
+  .kpmg-title {
+    font-size: 30px;
+  }
+  
+  .checkbox-text {
+    font-size: 13.5px;
+  }
+  
+  .kpmg-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

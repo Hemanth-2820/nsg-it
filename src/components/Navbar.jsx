@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Phone, ArrowUpRight } from 'lucide-react';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X, ChevronDown, Phone, ArrowUpRight, User } from 'lucide-react';
 import logo from '../assets/logo.jpg';
 
 const tabData = {
@@ -110,11 +111,38 @@ const techIcons = [
   }
 ];
 
-const Navbar = ({ onSelectService, onGoHome, isDetailPage, accentColor }) => {
+const serviceAccentColors = [
+  "#D946EF", // web-dev
+  "#F59E0B", // app-dev
+  "#06B6D4", // software-dev
+  "#F97316", // aws-devops
+  "#3B82F6", // hosting
+  "#22C55E", // marketing
+  "#8B5CF6", // ai-rag
+  "#DB2777", // ivr
+  "#14B8A6", // api-integrations
+  "#EF4444", // ecommerce
+  "#6366F1", // ai-automation
+  "#E11D48"  // security
+];
+
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeCategory, setActiveCategory] = useState("Our Services");
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Dynamic values derived directly from the active route
+  const isDetailPage = location.pathname.startsWith('/services/');
+  const isLightPage = location.pathname === '/career' || location.pathname === '/contact' || location.pathname === '/blogs' || location.pathname.startsWith('/solutions');
+  const match = location.pathname.match(/\/services\/(\d+)/);
+  const serviceIndex = match ? parseInt(match[1], 10) : null;
+  const accentColor = isDetailPage && serviceIndex !== null && !isNaN(serviceIndex)
+    ? serviceAccentColors[serviceIndex]
+    : null;
 
   // Set navbar background transparency on scroll
   useEffect(() => {
@@ -129,82 +157,113 @@ const Navbar = ({ onSelectService, onGoHome, isDetailPage, accentColor }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.nav-item')) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, []);
+
   const handleDropdownHover = (menu) => {
     setActiveDropdown(menu);
   };
 
   const handleDropdownLeave = () => {
     setActiveDropdown(null);
-    setActiveCategory("Our Services"); // Reset to default when leaving
+    setActiveCategory("Our Services");
   };
 
-  const handleServiceClick = (idx) => {
-    if (onSelectService) {
-      onSelectService(idx);
-      setActiveDropdown(null); // CLOSE DROPDOWN INSTANTLY FOR PERFECT UX!
-      setIsOpen(false); // Close mobile menu if active
-      
-      // Smooth scroll to the hero/home section so the slide is visible
-      const heroSec = document.getElementById('home');
-      if (heroSec) {
-        heroSec.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
-  const handleGoHome = (e, targetId) => {
+  const handleNavScroll = (e, targetId) => {
     if (e) e.preventDefault();
     setIsOpen(false);
     setActiveDropdown(null);
-    if (onGoHome) {
-      onGoHome();
-    }
-    setTimeout(() => {
-      let actualId = targetId;
-      if (targetId === 'career') actualId = 'careers';
-      const element = document.getElementById(actualId);
+    
+    if (location.pathname === '/' || location.pathname === '/home') {
+      const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 100);
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+  };
+
+  const handleServiceClick = (idx) => {
+    navigate(`/services/${idx}`);
+    setActiveDropdown(null);
+    setIsOpen(false);
   };
 
   return (
     <header 
-      className={`navbar-header ${scrolled ? 'scrolled' : ''} ${isDetailPage ? 'is-detail-page' : ''}`}
+      className={`navbar-header ${scrolled ? 'scrolled' : ''} ${isDetailPage ? 'is-detail-page' : ''} ${isLightPage ? 'is-light-page' : ''}`}
       style={isDetailPage && accentColor ? { '--accent-color': accentColor } : null}
     >
       <div className="navbar-container">
         {/* LOGO AREA */}
-        <div className="logo-area" onClick={(e) => handleGoHome(e, 'home')} style={{ cursor: 'pointer' }}>
+        <Link to="/" className="logo-area" onClick={() => setIsOpen(false)}>
           <div className="logo-img-wrapper">
             <img src={logo} alt="NSG IT Logo" className="navbar-logo-img" />
           </div>
-        </div>
+        </Link>
 
         {/* DESKTOP NAV */}
         <nav className="desktop-nav">
           <ul className="nav-links">
             <li className="nav-item">
-              <a href="#home" className="nav-link active" onClick={(e) => handleGoHome(e, 'home')}>Home</a>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              >
+                Home
+              </NavLink>
             </li>
             
             <li className="nav-item">
-              <a href="#about" className="nav-link" onClick={(e) => handleGoHome(e, 'about')}>About Us</a>
+              <NavLink 
+                to="/about" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              >
+                About Us
+              </NavLink>
             </li>
 
-
             <li 
-              className="nav-item"
+              className="nav-item services-nav-item"
               onMouseEnter={() => handleDropdownHover('services')}
               onMouseLeave={handleDropdownLeave}
             >
-              <a 
-                href="#services" 
+              <span 
                 className={`nav-link ${activeDropdown === 'services' ? 'active-dropdown-link' : ''}`}
+                style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (activeDropdown === 'services') {
+                    handleDropdownLeave();
+                  } else {
+                    handleDropdownHover('services');
+                  }
+                }}
               >
-                Services <ChevronDown size={14} className="caret-icon" />
-              </a>
+                Services <ChevronDown 
+                  size={14} 
+                  className="caret-icon" 
+                  style={{ 
+                    transform: activeDropdown === 'services' ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.3s ease'
+                  }} 
+                />
+              </span>
               {activeDropdown === 'services' && (
                 <div className="services-megamenu-panel">
                   {/* LEFT COL: SIDEBAR TABS & TECH ICONS */}
@@ -276,9 +335,8 @@ const Navbar = ({ onSelectService, onGoHome, isDetailPage, accentColor }) => {
                         Struggling with <span className="banner-text-highlight">tech decisions</span>? Get <span className="banner-text-highlight">2 hours</span> of free consultation!
                       </span>
                       <button className="banner-btn" onClick={() => {
-                        setActiveDropdown(null); // Close dropdown
-                        const contactSec = document.getElementById('contact');
-                        if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
+                        handleDropdownLeave();
+                        navigate('/contact');
                       }}>
                         FREE CONSULTATION <ArrowUpRight size={15} />
                       </button>
@@ -288,21 +346,86 @@ const Navbar = ({ onSelectService, onGoHome, isDetailPage, accentColor }) => {
               )}
             </li>
 
-            <li className="nav-item">
-              <a href="#career" className="nav-link" onClick={(e) => handleGoHome(e, 'career')}>Career</a>
+            <li 
+              className="nav-item solutions-nav-item"
+              onMouseEnter={() => handleDropdownHover('solutions')}
+              onMouseLeave={handleDropdownLeave}
+            >
+              <span 
+                className={`nav-link ${activeDropdown === 'solutions' ? 'active-dropdown-link' : ''}`}
+                style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (activeDropdown === 'solutions') {
+                    handleDropdownLeave();
+                  } else {
+                    handleDropdownHover('solutions');
+                  }
+                }}
+              >
+                Solutions <ChevronDown 
+                  size={14} 
+                  className="caret-icon" 
+                  style={{ 
+                    transform: activeDropdown === 'solutions' ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.3s ease'
+                  }} 
+                />
+              </span>
+              {activeDropdown === 'solutions' && (
+                <div className="solutions-dropdown-panel">
+                  <div className="solutions-dropdown-grid">
+                    {tabData["Our Services"].map((service, idx) => (
+                      <div 
+                        key={idx} 
+                        className="solutions-dropdown-item" 
+                        onClick={() => {
+                          navigate(`/solutions/${service.index}`);
+                          setActiveDropdown(null);
+                        }}
+                      >
+                        <span className="solutions-dropdown-name">{service.name} Solutions</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </li>
 
             <li className="nav-item">
-              <a href="#contact" className="nav-link" onClick={(e) => handleGoHome(e, 'contact')}>Contact Us</a>
+              <NavLink 
+                to="/career" 
+                className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+              >
+                Career
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink 
+                to="/blogs" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              >
+                Blogs
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink 
+                to="/contact" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              >
+                Contact Us
+              </NavLink>
             </li>
           </ul>
         </nav>
 
         {/* CTA BUTTON */}
         <div className="nav-cta">
-          <a href="#contact" className="cta-btn-neon" onClick={(e) => handleGoHome(e, 'contact')}>
-            <Phone size={14} /> Free Consultation
-          </a>
+          <Link to="/client-login" className="cta-btn-neon" onClick={() => setIsOpen(false)}>
+            <User size={14} /> Client Login
+          </Link>
         </div>
 
         {/* HAMBURGER TOGGLE */}
@@ -314,32 +437,48 @@ const Navbar = ({ onSelectService, onGoHome, isDetailPage, accentColor }) => {
       {/* MOBILE NAV OVERLAY */}
       <div className={`mobile-nav-overlay ${isOpen ? 'active' : ''}`}>
         <ul className="mobile-nav-links">
-          <li><a href="#home" className="mobile-nav-link" onClick={(e) => handleGoHome(e, 'home')}>Home</a></li>
-          <li><a href="#about" className="mobile-nav-link" onClick={(e) => handleGoHome(e, 'about')}>About Us</a></li>
+          <li><Link to="/" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link to="/about" className="mobile-nav-link" onClick={() => setIsOpen(false)}>About Us</Link></li>
           <li>
-            <a href="#services" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Services</a>
+            <span className="mobile-nav-link" style={{ cursor: 'default' }}>Services</span>
             <div className="mobile-nav-services-list">
               {tabData["Our Services"].map((service, idx) => (
-                <a 
+                <div 
                   key={idx} 
-                  href="#home" 
                   className="mobile-nav-service-link"
-                  onClick={() => {
-                    handleServiceClick(service.index);
-                    setIsOpen(false);
-                  }}
+                  onClick={() => handleServiceClick(service.index)}
+                  style={{ cursor: 'pointer' }}
                 >
                   ● {service.name}
-                </a>
+                </div>
               ))}
             </div>
           </li>
-          <li><a href="#career" className="mobile-nav-link" onClick={(e) => handleGoHome(e, 'career')}>Career</a></li>
-          <li><a href="#contact" className="mobile-nav-link" onClick={(e) => handleGoHome(e, 'contact')}>Contact Us</a></li>
+          <li>
+            <span className="mobile-nav-link" style={{ cursor: 'default' }}>Solutions</span>
+            <div className="mobile-nav-services-list">
+              {tabData["Our Services"].map((service, idx) => (
+                <div 
+                  key={idx} 
+                  className="mobile-nav-service-link"
+                  onClick={() => {
+                    navigate(`/solutions/${service.index}`);
+                    setIsOpen(false);
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  ● {service.name} Solutions
+                </div>
+              ))}
+            </div>
+          </li>
+          <li><NavLink to="/career" className="mobile-nav-link">Career</NavLink></li>
+          <li><Link to="/blogs" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Blogs</Link></li>
+          <li><Link to="/contact" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
           <li style={{ marginTop: '20px' }}>
-            <a href="#contact" className="cta-btn-neon mobile-cta-btn" onClick={(e) => handleGoHome(e, 'contact')}>
-              <Phone size={14} /> Free Consultation
-            </a>
+            <Link to="/client-login" className="cta-btn-neon mobile-cta-btn" onClick={() => setIsOpen(false)}>
+              <User size={14} /> Client Login
+            </Link>
           </li>
         </ul>
       </div>

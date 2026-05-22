@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CareersSection.css';
 import modernTechTeam from '../assets/modern_tech_team.png';
 import softwareDevsOffice from '../assets/software_developers_office.png';
@@ -84,9 +85,9 @@ const CareersSection = () => {
 
         {/* Centralized Action Button */}
         <div className="careers-action">
-          <a href="#contact" className="careers-btn">
+          <Link to="/contact" className="careers-btn">
             JOIN OUR TEAM
-          </a>
+          </Link>
         </div>
       </div>
     </section>

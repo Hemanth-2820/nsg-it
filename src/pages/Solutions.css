@@ -1,0 +1,793 @@
+/* ====================================================
+   SOLUTIONS PORTAL STYLE SHEET
+   ==================================================== */
+
+.solutions-page-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 96px 0 0 0; /* Nav header space */
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ────────────────────────────────────────────────────
+   VIBRANT GRADIENT HERO BANNER
+   ──────────────────────────────────────────────────── */
+.solutions-hero-banner {
+  width: 100%;
+  position: relative;
+  /* Premium blend of active solution color with corporate deep void navy */
+  background: linear-gradient(135deg, var(--solution-accent-color) 0%, #0c1c3a 100%);
+  padding: 85px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.solutions-hero-grid {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.solutions-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+  z-index: 2;
+}
+
+.solutions-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.solutions-hero-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.solutions-hero-description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 400;
+  max-width: 620px;
+}
+
+/* White transparent outline button from screenshot */
+.solutions-hero-cta {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  padding: 14px 28px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.solutions-hero-cta:hover {
+  background: #ffffff;
+  color: #0c1c3a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+/* Hero Image & Floating Graphics */
+.solutions-hero-graphic-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.graphic-backdrop-glow {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  background: radial-gradient(circle, var(--solution-accent-color) 0%, transparent 70%);
+  opacity: 0.25;
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.solutions-hero-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.solutions-hero-banner:hover .solutions-hero-image {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* ────────────────────────────────────────────────────
+   CORE CAPABILITIES INTRO BLOCK
+   ──────────────────────────────────────────────────── */
+.solutions-intro-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 70px 0 50px 0;
+  box-sizing: border-box;
+}
+
+.solutions-intro-content {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.solutions-intro-heading {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: #0c101d;
+  line-height: 1.35;
+  margin: 0 0 20px 0;
+}
+
+.solutions-intro-lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ────────────────────────────────────────────────────
+   ALTERNATING SOLUTIONS BLOCKS SECTION
+   ──────────────────────────────────────────────────── */
+.solutions-alternating-feed {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0 80px 0;
+  box-sizing: border-box;
+}
+
+.feed-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 75px; /* Spacing between solution rows */
+}
+
+/* Individual row */
+.solution-alternating-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Odd blocks: Image left, content right.
+   Even blocks: Content left, image right */
+.solution-alternating-block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Image Visual Box */
+.solution-block-visual-box {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+}
+
+.visual-backdrop-tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.solution-block-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  /* EXACT GRAYSCALE FILTER FROM USER SCREENSHOT */
+  filter: grayscale(100%) contrast(1.1) brightness(0.95);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solution-alternating-block:hover .solution-block-image {
+  filter: grayscale(0%) contrast(1) brightness(1); /* Smooth hover to full-fidelity */
+  transform: scale(1.03);
+}
+
+/* Content Details Box */
+.solution-block-details-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  text-align: left;
+}
+
+.solution-block-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--solution-accent-color, #00338d);
+  letter-spacing: 1px;
+}
+
+.solution-block-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0c101d;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.solution-block-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+  font-weight: 400;
+}
+
+.solution-block-secondary-text {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.solution-block-check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 6px;
+}
+
+.check-icon {
+  flex-shrink: 0;
+}
+
+/* ────────────────────────────────────────────────────
+   OUR APPROACH METHODOLOGY TIMELINE (DARK THEMED)
+   ──────────────────────────────────────────────────── */
+.solutions-approach-timeline-section {
+  width: 100%;
+  position: relative;
+  background-color: #030712; /* Sleek dark void background */
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.04) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='207.84' viewBox='0 0 120 207.84'%3E%3Cpath d='M60 0 L120 34.64 L120 103.92 L60 138.56 L0 103.92 L0 34.64 Z M60 207.84 L120 173.2 L120 103.92 L60 138.56 L0 103.92 L0 173.2 Z' fill='none' stroke='%231f2937' stroke-width='0.75' stroke-opacity='0.25'/%3E%3Ccircle cx='60' cy='0' r='1.5' fill='%231f2937' fill-opacity='0.4'/%3E%3Ccircle cx='120' cy='34.64' r='1.5' fill='%231f2937' fill-opacity='0.4'/%3E%3Ccircle cx='120' cy='103.92' r='1.5' fill='%231f2937' fill-opacity='0.4'/%3E%3Ccircle cx='60' cy='138.56' r='1.5' fill='%231f2937' fill-opacity='0.4'/%3E%3Ccircle cx='0' cy='103.92' r='1.5' fill='%231f2937' fill-opacity='0.4'/%3E%3Ccircle cx='0' cy='34.64' r='1.5' fill='%231f2937' fill-opacity='0.4'/%3E%3C/svg%3E");
+  padding: 120px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.approach-section-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.approach-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* Two-column layout matching the premium screenshot */
+.approach-two-columns-grid {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.approach-left-column {
+  position: sticky;
+  top: 130px; /* Sticky heading while scrolling the timeline */
+  text-align: left;
+}
+
+.approach-section-heading {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.approach-right-column {
+  width: 100%;
+}
+
+/* Vertical timeline connecting line structure in right column */
+.approach-timeline-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+/* Gray background connecting line (inactive track) */
+.approach-timeline-axis-bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+  bottom: 15px;
+  width: 4px;
+  background-color: #111827; /* Dark background */
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Colored progress indicator line overlay (active path) */
+.approach-timeline-axis-progress {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+  width: 4px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 2;
+  transition: height 0.1s linear; /* Ultra-smooth growing animation */
+}
+
+.approach-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Spacing between rows */
+  position: relative;
+  width: 100%;
+}
+
+.approach-timeline-step-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  align-items: center;
+}
+
+/* Center-aligned glowing circle indicator */
+.approach-step-circle-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #1f2937;
+  background-color: #0b0f19;
+  box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step-number-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #9ca3af;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+
+/* When step is active, circle becomes SOLID active color and text is white */
+.approach-timeline-step-row.step-active .approach-step-circle-indicator {
+  background-color: var(--solution-accent-color, #D946EF) !important;
+  border-color: var(--solution-accent-color, #D946EF) !important;
+  box-shadow: 0 0 25px var(--solution-accent-color, #D946EF);
+}
+
+.approach-timeline-step-row.step-active .step-number-text {
+  color: #ffffff !important;
+}
+
+/* Step Text Detail Card */
+.approach-step-card-detail {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.30; /* Fades inactive steps */
+  transform: translateY(10px);
+}
+
+.approach-timeline-step-row.step-active .approach-step-card-detail {
+  opacity: 1; /* Highlights active steps */
+  transform: translateY(0);
+}
+
+.approach-step-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  transition: color 0.4s ease;
+}
+
+.approach-timeline-step-row.step-active .approach-step-title {
+  color: var(--solution-accent-color, #D946EF);
+}
+
+.approach-step-body {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #9ca3af;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Parity alignments for Alternating grid layout */
+.approach-timeline-step-row.step-even .approach-step-card-detail {
+  grid-column: 2;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.approach-timeline-step-row.step-odd .approach-step-card-detail {
+  grid-column: 1;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* ────────────────────────────────────────────────────
+   CALL TO ACTION BOTTOM BANNER
+   ──────────────────────────────────────────────────── */
+.solutions-bottom-cta-section {
+  width: 100%;
+  padding: 85px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  position: relative;
+}
+
+.bottom-cta-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.bottom-cta-heading {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.bottom-cta-lead {
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 680px;
+}
+
+.bottom-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.bottom-cta-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0c1c3a;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 13px 26px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.bottom-cta-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  background-color: #f1f5f9;
+}
+
+.bottom-cta-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  padding: 12px 26px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bottom-cta-secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Footer structure specifically for Solutions */
+.solutions-footer-block {
+  margin-top: auto;
+  border-top: 1px solid #e2e8f0;
+  padding: 40px 0;
+  background-color: #f8fafc;
+  width: 100%;
+}
+
+.solutions-footer-block .footer-content {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.solutions-footer-logo {
+  height: 38px;
+  opacity: 0.9;
+}
+
+.solutions-footer-block .footer-credits {
+  font-size: 13.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ────────────────────────────────────────────────────
+   RESPONSIVE DESIGN ADAPTATIONS
+   ──────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .solutions-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+  
+  .solutions-hero-text {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .solutions-hero-description {
+    max-width: 100%;
+  }
+
+  .solution-alternating-block {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-page-container {
+    padding-top: 80px;
+  }
+
+  .solutions-hero-banner {
+    padding: 60px 0;
+  }
+
+  .solutions-intro-section {
+    padding: 45px 0 25px 0;
+  }
+
+  .solutions-alternating-feed {
+    padding: 10px 0 50px 0;
+  }
+
+  .solution-alternating-block,
+  .solution-alternating-block:nth-child(even) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .solution-block-visual-box {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .solutions-approach-timeline-section {
+    padding: 60px 0;
+  }
+
+  .approach-two-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .approach-left-column {
+    position: static;
+    text-align: center;
+  }
+
+  .approach-section-heading {
+    text-align: center;
+  }
+
+  .approach-timeline-wrapper {
+    padding-left: 45px;
+  }
+
+  .approach-timeline-axis-bg,
+  .approach-timeline-axis-progress {
+    left: 17px;
+    transform: none;
+  }
+
+  .approach-timeline-step-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+    align-items: flex-start;
+    padding: 15px 0;
+  }
+
+  .approach-timeline-step-row.step-even .approach-step-card-detail,
+  .approach-timeline-step-row.step-odd .approach-step-card-detail {
+    grid-column: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .approach-step-circle-indicator {
+    left: -45px;
+    top: 15px;
+    transform: none;
+    width: 32px;
+    height: 32px;
+  }
+
+  .step-number-text {
+    font-size: 13px;
+  }
+
+  .approach-steps-list {
+    gap: 30px;
+  }
+
+  .approach-step-title {
+    font-size: 18px;
+  }
+
+  .approach-step-body {
+    font-size: 14px;
+  }
+
+  .solutions-bottom-cta-section {
+    padding: 60px 0;
+  }
+
+  .solutions-footer-block .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* Sub-solution block CTA button */
+.solution-block-cta-btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-color, #8B5CF6);
+  background: transparent;
+  border: 2px solid var(--accent-color, #8B5CF6);
+  border-radius: 4px;
+  padding: 10px 22px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  outline: none;
+}
+
+.solution-block-cta-btn:hover {
+  background: var(--accent-color, #8B5CF6);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.2);
+}
