@@ -3,25 +3,25 @@ import {
   Database, Layers, Cloud, Brain, Shield, Radio, RefreshCw, Cpu, Activity, UserCheck, 
   Send, Sparkles, Server, Zap, Globe, Lock
 } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 
 const TechShowcase = ({ onSelectSlide, currentSlide }) => {
   const [formData, setFormData] = useState({ name: '', email: '', service: 'Digital Transformation', msg: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const pillars = [
-    { icon: <Sparkles size={18} />, label: "Web Development", desc: "Immersive high-fidelity client flagships.", color: "#d946ef", slideIdx: 0 },
-    { icon: <Layers size={18} />, label: "App Development", desc: "Multi-platform mobile environments.", color: "#ffb800", slideIdx: 1 },
-    { icon: <Database size={18} />, label: "Software Development", desc: "Scalable backend core engines.", color: "#00f2fe", slideIdx: 2 },
-    { icon: <RefreshCw size={18} />, label: "AWS & DevOps", desc: "Continuous automated delivery loops.", color: "#ec4899", slideIdx: 3 },
-    { icon: <Cloud size={18} />, label: "Hosting & Server Management", desc: "High-availability global server fabrics.", color: "#818cf8", slideIdx: 4 },
-    { icon: <Radio size={18} />, label: "Digital Marketing", desc: "Advanced brand telemetry & strategy.", color: "#0df2a3", slideIdx: 5 },
-    { icon: <Brain size={18} />, label: "AI & RAG Chatbots", desc: "Cognitive AI search & agent systems.", color: "#aa3bff", slideIdx: 6 },
-    { icon: <Cpu size={18} />, label: "IVR Solutions", desc: "Interactive voice response networks.", color: "#a855f7", slideIdx: 7 },
-    { icon: <Lock size={18} />, label: "API Integrations", desc: "Secure unified corporate interfaces.", color: "#10b981", slideIdx: 8 },
-    { icon: <Shield size={18} />, label: "E-Commerce Solutions", desc: "Secured high-frequency trading grids.", color: "#ff2d55", slideIdx: 9 },
-    { icon: <Brain size={18} />, label: "AI & Automation", desc: "Cognitive robotic process automations.", color: "#aa3bff", slideIdx: 10 },
-    { icon: <Shield size={18} />, label: "Security & Maintenance", desc: "Zero-Trust persistent threat defense.", color: "#ff2d55", slideIdx: 11 },
+    { icon: <Sparkles size={18} />, label: "Web Development", desc: "Immersive high-fidelity client flagships.", color: "#C78932", slideIdx: 0 },
+    { icon: <Layers size={18} />, label: "App Development", desc: "Multi-platform mobile environments.", color: "#EBE4CD", slideIdx: 1 },
+    { icon: <Database size={18} />, label: "Software Development", desc: "Scalable backend core engines.", color: "#C78932", slideIdx: 2 },
+    { icon: <RefreshCw size={18} />, label: "AWS & DevOps", desc: "Continuous automated delivery loops.", color: "#EBE4CD", slideIdx: 3 },
+    { icon: <Cloud size={18} />, label: "Hosting & Server Management", desc: "High-availability global server fabrics.", color: "#C78932", slideIdx: 4 },
+    { icon: <Radio size={18} />, label: "Digital Marketing", desc: "Advanced brand telemetry & strategy.", color: "#EBE4CD", slideIdx: 5 },
+    { icon: <Brain size={18} />, label: "AI & RAG Chatbots", desc: "Cognitive AI search & agent systems.", color: "#C78932", slideIdx: 6 },
+    { icon: <Cpu size={18} />, label: "IVR Solutions", desc: "Interactive voice response networks.", color: "#EBE4CD", slideIdx: 7 },
+    { icon: <Lock size={18} />, label: "API Integrations", desc: "Secure unified corporate interfaces.", color: "#C78932", slideIdx: 8 },
+    { icon: <Shield size={18} />, label: "E-Commerce Solutions", desc: "Secured high-frequency trading grids.", color: "#EBE4CD", slideIdx: 9 },
+    { icon: <Brain size={18} />, label: "AI & Automation", desc: "Cognitive robotic process automations.", color: "#C78932", slideIdx: 10 },
+    { icon: <Shield size={18} />, label: "Security & Maintenance", desc: "Zero-Trust persistent threat defense.", color: "#EBE4CD", slideIdx: 11 },
   ];
 
   const stats = [

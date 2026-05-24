@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, ArrowUpRight, User } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 
 const tabData = {
   "Our Services": [
@@ -112,18 +112,18 @@ const techIcons = [
 ];
 
 const serviceAccentColors = [
-  "#D946EF", // web-dev
-  "#F59E0B", // app-dev
-  "#06B6D4", // software-dev
-  "#F97316", // aws-devops
-  "#3B82F6", // hosting
-  "#22C55E", // marketing
-  "#8B5CF6", // ai-rag
-  "#DB2777", // ivr
-  "#14B8A6", // api-integrations
-  "#EF4444", // ecommerce
-  "#6366F1", // ai-automation
-  "#E11D48"  // security
+  "#C78932", // web-dev (Gold)
+  "#EBE4CD", // app-dev (Light Gold)
+  "#01367A", // software-dev (Dark Blue)
+  "#C78932", // aws-devops (Gold)
+  "#01367A", // hosting (Dark Blue)
+  "#EBE4CD", // marketing (Light Gold)
+  "#C78932", // ai-rag (Gold)
+  "#EBE4CD", // ivr (Light Gold)
+  "#01367A", // api-integrations (Dark Blue)
+  "#C78932", // ecommerce (Gold)
+  "#EBE4CD", // ai-automation (Light Gold)
+  "#C78932"  // security (Gold)
 ];
 
 const Navbar = () => {

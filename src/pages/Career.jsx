@@ -883,7 +883,7 @@ const Career = () => {
                           <br /><br />
                           Refer to Hexaware's Privacy policy link given below for additional details/clarifications.
                           <br />
-                          <a href="https://hexaware.com/privacy-policy/" target="_blank" rel="noopener noreferrer" style={{color: '#ca0572', textDecoration: 'underline'}}>https://hexaware.com/privacy-policy/</a>
+                          <a href="https://hexaware.com/privacy-policy/" target="_blank" rel="noopener noreferrer" style={{color: '#C78932', textDecoration: 'underline'}}>https://hexaware.com/privacy-policy/</a>
                         </div>
                         <div className="privacy-policy-agree-row" style={{marginTop: '12px'}}>
                           <input 

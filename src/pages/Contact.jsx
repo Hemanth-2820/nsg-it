@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import './Contact.css';
 
 const Contact = () => {

@@ -3,8 +3,8 @@
 .services-card-section {
   position: relative;
   width: 100%;
-  background-color: #211fe9; /* Same royal blue to continue unified visual block */
-  padding: 0 0 120px 0; /* Padding at bottom, seamless top margin from above section */
+  background-color: #01367A;
+  padding: 0 0 120px 0;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -158,24 +158,24 @@
 
 /* HOVER INTERACTIONS - EXACTLY MATCHING SCREENSHOT ACTIVE STATE */
 .service-pillar-card.card-hovered {
-  background-color: #ffffff; /* Smooth transitions to pure white */
+  background-color: #ffffff;
   transform: translateY(-8px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(199, 137, 50, 0.15);
 }
 
 .service-pillar-card.card-hovered .card-pillar-title {
-  color: #211fe9; /* Text turns deep royal blue */
+  color: #01367A;
 }
 
 .service-pillar-card.card-hovered .card-pillar-description {
-  color: #3730a3; /* Text turns rich violet */
+  color: #012760;
 }
 
 .service-pillar-card.card-hovered .card-hexagon-btn {
-  background-color: #211fe9; /* Button turns glowing royal blue */
+  background-color: #C78932;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(33, 31, 233, 0.4);
+  box-shadow: 0 4px 15px rgba(199, 137, 50, 0.4);
 }
 
 .service-pillar-card.card-hovered .card-diagonal-image-wrapper {

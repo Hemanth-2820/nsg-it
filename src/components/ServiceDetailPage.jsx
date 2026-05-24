@@ -25,7 +25,7 @@ export const serviceDetailsDataset = [
     description: "We design and engineer bespoke web platforms using cutting-edge frameworks. From corporate portals to custom SaaS interfaces, we build responsive, secure, and visually stunning digital assets that convert visitors.",
     btnText: "Launch Your Web Project",
     image: detailWebDevImg,
-    color: "#D946EF",
+    color: "#C78932",
     features: [
       { name: "Responsive Fluid Design", desc: "Optimized across all devices with premium breakpoint management and dynamic resizing layouts." },
       { name: "Sub-Second Page Loads", desc: "High performance score optimization through static generation and advanced asset caching mechanisms." },
@@ -39,12 +39,13 @@ export const serviceDetailsDataset = [
       heading: "Solutions We Build",
       description: "We bridge the gap between complex business logic and seamless user interaction. From high-growth startups to established enterprises, we build frontend solutions that perform across every digital touchpoint.",
       tiles: [
-        { label: "Enterprise Platform", bg: "#ede9fe", icon: "enterprise" },
-        { label: "PWA",                bg: "#ffffff", icon: "pwa" },
-        { label: "MVP Development",    bg: "#fef9c3", icon: "mvp" },
-        { label: "SaaS Platform",      bg: "#ffffff", icon: "saas" },
-        { label: "Cloud App",          bg: "#d1fae5", icon: "cloud" },
-        { label: "SPA",               bg: "#ffffff", icon: "spa" }
+        { label: "Enterprise Platform" , bg: "#EBE4CD", icon: "enterprise" },
+        { label: "PWA"                 , bg: "#ffffff", icon: "pwa" },
+        { label: "MVP Development"     , bg: "#91BFFA", icon: "mvp" },
+        { label: "SaaS Platform"       , bg: "#ffffff", icon: "saas" },
+        { label: "Cloud App"           , bg: "#C78932", icon: "cloud" },
+        { label: "SPA"                 , bg: "#ffffff", icon: "spa" }
+      
       ]
     },
     process: [
@@ -75,7 +76,7 @@ export const serviceDetailsDataset = [
     description: "Leverage native performance and custom gestures to create mobile products that stand out. We engineer cross-platform apps with near-zero latency, robust offline sync, and beautiful micro-animations.",
     btnText: "Schedule App Consultation",
     image: detailAppDevImg,
-    color: "#F59E0B",
+    color: "#EBE4CD",
     features: [
       { name: "Cross-Platform Sync", desc: "Single-codebase efficiency with fully native compilation for iOS and Android environments." },
       { name: "Offline-First Storage", desc: "Local database caching and synchronizing algorithms that retain inputs when internet drops." },
@@ -89,12 +90,13 @@ export const serviceDetailsDataset = [
       heading: "Apps We Deliver",
       description: "From consumer apps to enterprise mobility platforms, we design and ship beautiful apps that users love. Our cross-platform expertise means a single investment reaches iOS and Android simultaneously.",
       tiles: [
-        { label: "Native iOS App",     bg: "#ede9fe", icon: "ios" },
-        { label: "Android App",        bg: "#ffffff", icon: "android" },
-        { label: "Flutter App",        bg: "#dbeafe", icon: "flutter" },
-        { label: "React Native",       bg: "#ffffff", icon: "reactnative" },
-        { label: "Offline-First App",  bg: "#d1fae5", icon: "offline" },
-        { label: "PWA",               bg: "#ffffff", icon: "pwa" }
+        { label: "Native iOS App"      , bg: "#91BFFA", icon: "ios" },
+        { label: "Android App"         , bg: "#ffffff", icon: "android" },
+        { label: "Flutter App"         , bg: "#C78932", icon: "flutter" },
+        { label: "React Native"        , bg: "#ffffff", icon: "reactnative" },
+        { label: "Offline-First App"   , bg: "#01367A", icon: "offline" },
+        { label: "PWA"                 , bg: "#ffffff", icon: "pwa" }
+      
       ]
     },
     process: [
@@ -121,7 +123,7 @@ export const serviceDetailsDataset = [
     description: "Power your enterprise with robust custom software. We construct secure database systems, perform complex API mappings, and build desktop engines designed to scale infinitely under heavy traffic loads.",
     btnText: "Start Software Planning",
     image: detailSoftwareDevImg,
-    color: "#06B6D4",
+    color: "#01367A",
     features: [
       { name: "High-Throughput APIs", desc: "Low-latency REST and gRPC endpoints that handle thousands of concurrent queries with ease." },
       { name: "Multi-Tenant Architecture", desc: "Safely segregate customer database spaces with perfect access isolation and encryption." },
@@ -135,12 +137,13 @@ export const serviceDetailsDataset = [
       heading: "Software We Engineer",
       description: "We build robust, scalable software systems that power businesses. From billing engines to enterprise ERPs, our solutions handle high-load, complex workflows with precision and reliability.",
       tiles: [
-        { label: "ERP System",         bg: "#ede9fe", icon: "erp" },
-        { label: "Billing Engine",     bg: "#ffffff", icon: "billing" },
-        { label: "CRM Software",       bg: "#fef9c3", icon: "crm" },
-        { label: "Desktop App",        bg: "#ffffff", icon: "desktop" },
-        { label: "Inventory System",   bg: "#d1fae5", icon: "inventory" },
-        { label: "REST API Engine",    bg: "#ffffff", icon: "api" }
+        { label: "ERP System"          , bg: "#C78932", icon: "erp" },
+        { label: "Billing Engine"      , bg: "#ffffff", icon: "billing" },
+        { label: "CRM Software"        , bg: "#01367A", icon: "crm" },
+        { label: "Desktop App"         , bg: "#ffffff", icon: "desktop" },
+        { label: "Inventory System"    , bg: "#EBE4CD", icon: "inventory" },
+        { label: "REST API Engine"     , bg: "#ffffff", icon: "api" }
+      
       ]
     },
     process: [
@@ -167,7 +170,7 @@ export const serviceDetailsDataset = [
     description: "Automate your infrastructure deployment, monitoring, and scaling. We configure secure elastic load balancers, secure cloud parameters, and optimize resource cost distributions to minimize cloud waste.",
     btnText: "Request DevOps Audit",
     image: detailAwsDevopsImg,
-    color: "#F97316",
+    color: "#C78932",
     features: [
       { name: "CI/CD Deployment Pipelines", desc: "Standardize linting, testing, and continuous deployment into staging and production with GitHub Actions." },
       { name: "Infrastructure as Code", desc: "Provision your servers, databases, and networks via fully versioned Terraform script definitions." },
@@ -181,12 +184,13 @@ export const serviceDetailsDataset = [
       heading: "Infrastructure We Deploy",
       description: "We architect, automate, and manage cloud infrastructure that scales effortlessly. From CI/CD pipelines to container orchestration, every layer is engineered for reliability, speed, and zero downtime.",
       tiles: [
-        { label: "CI/CD Pipeline",    bg: "#ede9fe", icon: "cicd" },
-        { label: "Kubernetes Cluster",bg: "#ffffff", icon: "kubernetes" },
-        { label: "Docker Setup",      bg: "#dbeafe", icon: "docker" },
-        { label: "Terraform IaC",     bg: "#ffffff", icon: "terraform" },
-        { label: "AWS Architecture",  bg: "#fef9c3", icon: "aws" },
-        { label: "Monitoring Stack",  bg: "#ffffff", icon: "monitoring" }
+        { label: "CI/CD Pipeline"      , bg: "#01367A", icon: "cicd" },
+        { label: "Kubernetes Cluster"  , bg: "#ffffff", icon: "kubernetes" },
+        { label: "Docker Setup"        , bg: "#EBE4CD", icon: "docker" },
+        { label: "Terraform IaC"       , bg: "#ffffff", icon: "terraform" },
+        { label: "AWS Architecture"    , bg: "#91BFFA", icon: "aws" },
+        { label: "Monitoring Stack"    , bg: "#ffffff", icon: "monitoring" }
+      
       ]
     },
     process: [
@@ -216,7 +220,7 @@ export const serviceDetailsDataset = [
     description: "We deploy and maintain high-performance hosting environments. With proactive server hardening, continuous security patching, and redundant backup grids, your uptime is fully guaranteed.",
     btnText: "Explore Hosting Services",
     image: detailHostingServersImg,
-    color: "#3B82F6",
+    color: "#01367A",
     features: [
       { name: "99.99% Uptime Guarantee", desc: "High redundancy cloud cluster architecture designed to prevent single points of failure." },
       { name: "Distributed Edge Content", desc: "Global CDN mapping to cache static files close to your target visitors, reducing latency." },
@@ -230,12 +234,13 @@ export const serviceDetailsDataset = [
       heading: "Hosting Solutions We Manage",
       description: "We set up and manage rock-solid hosting environments so your websites are always fast, secure, and online. From VPS to dedicated servers and cloud clusters, we handle every layer of your infrastructure.",
       tiles: [
-        { label: "VPS Hosting",       bg: "#ede9fe", icon: "vps" },
-        { label: "Cloud Hosting",     bg: "#ffffff", icon: "cloud" },
-        { label: "Dedicated Server",  bg: "#dbeafe", icon: "server" },
-        { label: "CDN Setup",         bg: "#ffffff", icon: "cdn" },
-        { label: "SSL & Security",    bg: "#d1fae5", icon: "ssl" },
-        { label: "Email Hosting",     bg: "#ffffff", icon: "email" }
+        { label: "VPS Hosting"         , bg: "#EBE4CD", icon: "vps" },
+        { label: "Cloud Hosting"       , bg: "#ffffff", icon: "cloud" },
+        { label: "Dedicated Server"    , bg: "#91BFFA", icon: "server" },
+        { label: "CDN Setup"           , bg: "#ffffff", icon: "cdn" },
+        { label: "SSL & Security"      , bg: "#C78932", icon: "ssl" },
+        { label: "Email Hosting"       , bg: "#ffffff", icon: "email" }
+      
       ]
     },
     process: [
@@ -266,7 +271,7 @@ export const serviceDetailsDataset = [
     description: "Reach your ideal demographic through analytics-led marketing channels. We optimize technical search elements, direct hyper-targeted campaigns, and design clean landing pages that yield measurable ROI.",
     btnText: "Optimize Marketing Strategy",
     image: detailDigitalMarketingImg,
-    color: "#22C55E",
+    color: "#EBE4CD",
     features: [
       { name: "Technical SEO Dominance", desc: "Deep audits, site architecture corrections, and keyword maps that drive search ranks and indexability." },
       { name: "Paid Campaign Optimization", desc: "Smart bidding strategies on search and social channels that minimize CPA while boosting lead quality." },
@@ -280,12 +285,13 @@ export const serviceDetailsDataset = [
       heading: "Campaigns We Run",
       description: "We build data-driven marketing engines that attract, convert, and retain customers. From organic search dominance to precision paid campaigns, every strategy is tied directly to measurable revenue growth.",
       tiles: [
-        { label: "SEO Optimisation",  bg: "#ede9fe", icon: "seo" },
-        { label: "Google Ads",        bg: "#ffffff", icon: "googleads" },
-        { label: "Meta Ads",          bg: "#fef9c3", icon: "metaads" },
-        { label: "Email Marketing",   bg: "#ffffff", icon: "emailmkt" },
-        { label: "Content Strategy",  bg: "#d1fae5", icon: "content" },
-        { label: "Analytics Dashboard",bg:"#ffffff", icon: "analytics" }
+        { label: "SEO Optimisation"    , bg: "#91BFFA", icon: "seo" },
+        { label: "Google Ads"          , bg: "#ffffff", icon: "googleads" },
+        { label: "Meta Ads"            , bg: "#C78932", icon: "metaads" },
+        { label: "Email Marketing"     , bg: "#ffffff", icon: "emailmkt" },
+        { label: "Content Strategy"    , bg: "#01367A", icon: "content" },
+        { label: "Analytics Dashboard" , bg: "#ffffff", icon: "analytics" }
+      
       ]
     },
     process: [
@@ -314,7 +320,7 @@ export const serviceDetailsDataset = [
     description: "Deploy bespoke enterprise-grade Large Language Model architectures integrated with proprietary knowledge systems. We design RAG (Retrieval-Augmented Generation) pipelines that allow cognitive agents to query your internal wikis, spreadsheets, and databases securely and with zero hallucinations.",
     btnText: "Schedule an AI Consultation",
     image: detailAiRagImg,
-    color: "#8B5CF6",
+    color: "#C78932",
     features: [
       { name: "Retrieval-Augmented Generation", desc: "Dynamically reference internal documents to generate factually accurate answers without LLM hallucination." },
       { name: "Zero-Leakage Security Isolation", desc: "Ensure sensitive business data never trains public models or leaks across user sessions." },
@@ -328,12 +334,13 @@ export const serviceDetailsDataset = [
       heading: "AI Systems We Build",
       description: "We design intelligent AI systems that go beyond simple chatbots. From RAG pipelines that retrieve real knowledge to LLM-powered agents that automate workflows, we deploy AI that drives genuine business value.",
       tiles: [
-        { label: "RAG Pipeline",      bg: "#ede9fe", icon: "rag" },
-        { label: "LLM Chatbot",       bg: "#ffffff", icon: "llm" },
-        { label: "Vector Database",   bg: "#fef9c3", icon: "vectordb" },
-        { label: "WhatsApp Bot",      bg: "#ffffff", icon: "whatsapp" },
-        { label: "AI Support Agent",  bg: "#d1fae5", icon: "aiagent" },
-        { label: "NLP Classifier",    bg: "#ffffff", icon: "nlp" }
+        { label: "RAG Pipeline"        , bg: "#C78932", icon: "rag" },
+        { label: "LLM Chatbot"         , bg: "#ffffff", icon: "llm" },
+        { label: "Vector Database"     , bg: "#01367A", icon: "vectordb" },
+        { label: "WhatsApp Bot"        , bg: "#ffffff", icon: "whatsapp" },
+        { label: "AI Support Agent"    , bg: "#EBE4CD", icon: "aiagent" },
+        { label: "NLP Classifier"      , bg: "#ffffff", icon: "nlp" }
+      
       ]
     },
     process: [
@@ -361,7 +368,7 @@ export const serviceDetailsDataset = [
     description: "Design clean, user-friendly interactive voice response grids. We structure smart auto-attendant menus, secure payment over phone channels, and connect telephony lines directly to customer CRM portals.",
     btnText: "Configure Telephony Grids",
     image: detailIvrSolutionsImg,
-    color: "#DB2777",
+    color: "#EBE4CD",
     features: [
       { name: "Intelligent ACD Routing", desc: "Automatically forward inbound calls matching caller responses and agent skills dynamically." },
       { name: "Natural Text-to-Speech", desc: "Dynamic greeting generation using premium acoustic neural voices with human-like intonations." },
@@ -375,12 +382,13 @@ export const serviceDetailsDataset = [
       heading: "Telephony Systems We Deploy",
       description: "We design intelligent call routing systems that create seamless caller experiences. From multi-level IVR menus to CRM-connected auto-attendants, we automate your inbound calls end to end.",
       tiles: [
-        { label: "Multi-Level IVR",   bg: "#ede9fe", icon: "ivrmenu" },
-        { label: "Auto Attendant",    bg: "#ffffff", icon: "autoattend" },
-        { label: "Call Queue System", bg: "#dbeafe", icon: "callqueue" },
-        { label: "Voice Bot",         bg: "#ffffff", icon: "voicebot" },
-        { label: "CRM Integration",   bg: "#d1fae5", icon: "crmivr" },
-        { label: "Cloud IVR",         bg: "#ffffff", icon: "cloudivr" }
+        { label: "Multi-Level IVR"     , bg: "#01367A", icon: "ivrmenu" },
+        { label: "Auto Attendant"      , bg: "#ffffff", icon: "autoattend" },
+        { label: "Call Queue System"   , bg: "#EBE4CD", icon: "callqueue" },
+        { label: "Voice Bot"           , bg: "#ffffff", icon: "voicebot" },
+        { label: "CRM Integration"     , bg: "#91BFFA", icon: "crmivr" },
+        { label: "Cloud IVR"           , bg: "#ffffff", icon: "cloudivr" }
+      
       ]
     },
     process: [
@@ -407,7 +415,7 @@ export const serviceDetailsDataset = [
     description: "We engineer secure microservice bridges to integrate third-party gateways, CRM architectures, and distributed services. Eradicate manual database updates with instantaneous API triggers.",
     btnText: "Plan API Integration",
     image: detailApiIntegrationsImg,
-    color: "#14B8A6",
+    color: "#01367A",
     features: [
       { name: "Real-Time Synchronization", desc: "Instantly update target databases via robust, encrypted, event-driven webhooks." },
       { name: "Fail-Safe Queue Processing", desc: "Message broker grids that guarantee API transmission even during target server down times." },
@@ -421,12 +429,13 @@ export const serviceDetailsDataset = [
       heading: "Integrations We Engineer",
       description: "We connect your entire software ecosystem — from payment gateways to CRMs and messaging platforms — through secure, high-performance API bridges that eliminate manual processes and data silos.",
       tiles: [
-        { label: "Payment Gateway",   bg: "#ede9fe", icon: "payment" },
-        { label: "WhatsApp API",      bg: "#ffffff", icon: "whatsapp" },
-        { label: "CRM Integration",   bg: "#fef9c3", icon: "crm" },
-        { label: "SMS & Email API",   bg: "#ffffff", icon: "smsapi" },
-        { label: "Webhook Engine",    bg: "#d1fae5", icon: "webhook" },
-        { label: "OAuth 2.0 Auth",    bg: "#ffffff", icon: "oauth" }
+        { label: "Payment Gateway"     , bg: "#EBE4CD", icon: "payment" },
+        { label: "WhatsApp API"        , bg: "#ffffff", icon: "whatsapp" },
+        { label: "CRM Integration"     , bg: "#91BFFA", icon: "crm" },
+        { label: "SMS & Email API"     , bg: "#ffffff", icon: "smsapi" },
+        { label: "Webhook Engine"      , bg: "#C78932", icon: "webhook" },
+        { label: "OAuth 2.0 Auth"      , bg: "#ffffff", icon: "oauth" }
+      
       ]
     },
     process: [
@@ -452,7 +461,7 @@ export const serviceDetailsDataset = [
     description: "Launch high-performance, conversion-centric online retail stores. We integrate secure payment gateways, build intelligent visual search systems, and configure elastic cart backends that prevent check-out lag.",
     btnText: "Build E-Commerce Grid",
     image: detailEcommerceImg,
-    color: "#EF4444",
+    color: "#C78932",
     features: [
       { name: "Frictionless Single-Page Checkout", desc: "Minimize cart abandonment with secure credit card, Apple Pay, Google Pay, and localized payment gates." },
       { name: "Real-Time Stock Synchronization", desc: "Instantaneous stock checking and automated alert triggers for inventory and warehouse teams." },
@@ -466,12 +475,13 @@ export const serviceDetailsDataset = [
       heading: "Stores We Build",
       description: "We create high-conversion online stores that turn browsers into buyers. From single-product Shopify stores to complex multi-vendor marketplaces, every platform is engineered to sell at scale.",
       tiles: [
-        { label: "Shopify Store",     bg: "#ede9fe", icon: "shopify" },
-        { label: "WooCommerce",       bg: "#ffffff", icon: "woo" },
-        { label: "Multi-Vendor",      bg: "#fef9c3", icon: "multivendor" },
-        { label: "Product Catalogue",bg: "#ffffff", icon: "catalogue" },
-        { label: "Order Management",  bg: "#d1fae5", icon: "orders" },
-        { label: "Payment Gateway",   bg: "#ffffff", icon: "payment" }
+        { label: "Shopify Store"       , bg: "#91BFFA", icon: "shopify" },
+        { label: "WooCommerce"         , bg: "#ffffff", icon: "woo" },
+        { label: "Multi-Vendor"        , bg: "#C78932", icon: "multivendor" },
+        { label: "Product Catalogue"   , bg: "#ffffff", icon: "catalogue" },
+        { label: "Order Management"    , bg: "#01367A", icon: "orders" },
+        { label: "Payment Gateway"     , bg: "#ffffff", icon: "payment" }
+      
       ]
     },
     process: [
@@ -499,7 +509,7 @@ export const serviceDetailsDataset = [
     description: "We deploy Robotic Process Automation (RPA) and cognitive workflow systems to automate administrative bottlenecks. Sync data across disconnected apps, auto-generate complex documents, and free up critical hours.",
     btnText: "Automate Office Workflows",
     image: detailAiAutomationImg,
-    color: "#6366F1",
+    color: "#EBE4CD",
     features: [
       { name: "Robotic Data Entry Blocks", desc: "Scripted screen scrapers and document readers that port data across web forms with zero human error." },
       { name: "Intelligent Document Parsing", desc: "AI-powered OCR to read invoices, shipping orders, and tax receipts automatically." },
@@ -513,12 +523,13 @@ export const serviceDetailsDataset = [
       heading: "Automation We Deploy",
       description: "We replace manual, repetitive work with intelligent bots and automated pipelines. From document OCR and data entry to multi-app workflow orchestration, we free your team to focus on what matters.",
       tiles: [
-        { label: "RPA Bot",           bg: "#ede9fe", icon: "rpa" },
-        { label: "OCR Engine",        bg: "#ffffff", icon: "ocr" },
-        { label: "Workflow Engine",   bg: "#fef9c3", icon: "workflow" },
-        { label: "AI Integration",    bg: "#ffffff", icon: "aiagent" },
-        { label: "Process Mining",    bg: "#d1fae5", icon: "processmining" },
-        { label: "Scheduled Tasks",   bg: "#ffffff", icon: "schedule" }
+        { label: "RPA Bot"             , bg: "#C78932", icon: "rpa" },
+        { label: "OCR Engine"          , bg: "#ffffff", icon: "ocr" },
+        { label: "Workflow Engine"     , bg: "#01367A", icon: "workflow" },
+        { label: "AI Integration"      , bg: "#ffffff", icon: "aiagent" },
+        { label: "Process Mining"      , bg: "#EBE4CD", icon: "processmining" },
+        { label: "Scheduled Tasks"     , bg: "#ffffff", icon: "schedule" }
+      
       ]
     },
     process: [
@@ -545,7 +556,7 @@ export const serviceDetailsDataset = [
     description: "We configure persistent security defense parameters and conduct periodic compliance audits. Keep your server software, code libraries, and customer data protected with absolute Zero-Trust protocols.",
     btnText: "Secure Corporate Network",
     image: detailSecurityImg,
-    color: "#E11D48",
+    color: "#C78932",
     features: [
       { name: "Continuous Vulnerability Scans", desc: "Automatic library dependencies checking and code vulnerability tracking with SonarQube." },
       { name: "Zero-Trust Perimeter Isolation", desc: "Granular access permissions, mandatory multi-factor authentication loops, and IP white-listing." },
@@ -559,12 +570,13 @@ export const serviceDetailsDataset = [
       heading: "Security We Enforce",
       description: "We protect your digital assets with comprehensive security audits, zero-trust architecture, and 24/7 monitoring. From penetration testing to WAF deployment, we keep threats out and your business running.",
       tiles: [
-        { label: "Penetration Testing",bg:"#ede9fe", icon: "pentest" },
-        { label: "WAF Deployment",    bg: "#ffffff", icon: "waf" },
-        { label: "SSL & HTTPS",       bg: "#fef9c3", icon: "ssl" },
-        { label: "Backup & Recovery", bg: "#ffffff", icon: "backup" },
-        { label: "Malware Removal",   bg: "#d1fae5", icon: "malware" },
-        { label: "Code Audit",        bg: "#ffffff", icon: "codeaudit" }
+        { label: "Penetration Testing" , bg: "#01367A", icon: "pentest" },
+        { label: "WAF Deployment"      , bg: "#ffffff", icon: "waf" },
+        { label: "SSL & HTTPS"         , bg: "#EBE4CD", icon: "ssl" },
+        { label: "Backup & Recovery"   , bg: "#ffffff", icon: "backup" },
+        { label: "Malware Removal"     , bg: "#91BFFA", icon: "malware" },
+        { label: "Code Audit"          , bg: "#ffffff", icon: "codeaudit" }
+      
       ]
     },
     process: [
@@ -666,14 +678,18 @@ const CapabilitiesSection = ({ data, color }) => (
         <p className="cap-description">{data.description}</p>
       </div>
       <div className="cap-grid">
-        {data.tiles.map((tile, i) => (
-          <div key={i} className="cap-tile" style={{ background: tile.bg }}>
-            <div className="cap-tile-icon">
-              {CapIcons[tile.icon] || CapIcons.enterprise}
+        {data.tiles.map((tile, i) => {
+          const isDarkBg = tile.bg === '#01367A' || tile.bg === '#C78932';
+          const tileTextColor = isDarkBg ? '#ffffff' : '#111827';
+          return (
+            <div key={i} className="cap-tile" style={{ background: tile.bg, color: tileTextColor }}>
+              <div className="cap-tile-icon">
+                {CapIcons[tile.icon] || CapIcons.enterprise}
+              </div>
+              <span className="cap-tile-label">{tile.label}</span>
             </div>
-            <span className="cap-tile-label">{tile.label}</span>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   </section>

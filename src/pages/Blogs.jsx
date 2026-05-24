@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import cardCloud from '../assets/card_cloud.png';
 import cardDataAnalytics from '../assets/card_data_analytics.png';
 import detailMarketing from '../assets/detail_digital_marketing.png';

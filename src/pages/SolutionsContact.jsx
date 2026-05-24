@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Footer from '../components/Footer';
 import { useLocation, useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import './SolutionsContact.css';
 
 const countries = [
@@ -158,7 +158,7 @@ const SolutionsContact = () => {
   const context = location.state || {};
   const activeSubName = context.subName || "IoT Development";
   const activeCategory = context.category || "AWS & DevOps";
-  const activeColor = context.accentColor || "#00A8FF";
+  const activeColor = context.accentColor || "#C78932";
 
   const [formData, setFormData] = useState({
     firstName: '',

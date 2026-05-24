@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   padding: 100px 5%;
-  background-color: #dbe4f6; /* Exact light lavender-blue / pastel purple-blue background */
+  background-color: #91BFFA;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -199,7 +199,7 @@
   font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
   font-size: clamp(2rem, 3.2vw, 2.8rem);
   font-weight: 800;
-  color: #0c101d; /* Deep premium navy/slate */
+  color: #01367A;
   margin: 0;
   letter-spacing: -1.2px;
   line-height: 1.15;
@@ -210,7 +210,7 @@
   font-size: clamp(1rem, 1.1vw, 1.15rem);
   font-weight: 500;
   line-height: 1.6;
-  color: #334155; /* Refined slate for clear readability */
+  color: #012760;
   margin: 0;
 }
 
@@ -224,8 +224,8 @@
 .careers-btn {
   position: relative;
   display: inline-block;
-  background: #0c101d; /* Deep slate background for stark premium contrast */
-  color: #ffffff; /* White text */
+  background: #01367A;
+  color: #ffffff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -237,7 +237,7 @@
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(1, 54, 122, 0.2);
   transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.3s ease;
@@ -250,7 +250,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ff0000; /* Red sweep transition */
+  background-color: #C78932;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left center;
@@ -260,7 +260,7 @@
 .careers-btn:hover {
   color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(199, 137, 50, 0.3);
 }
 
 .careers-btn:hover::before {

@@ -1,7 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
+/* ====================================================
+   BRAND COLOR TOKENS
+   Dark Blue:    #01367A  — headings on light bg, dark sections
+   Gold:         #C78932  — buttons, accents, text on dark bg
+   Light Blue:   #91BFFA  — alternate section backgrounds
+   Light Gold:   #EBE4CD  — alternate section backgrounds, menu bg
+   White:        #ffffff  — used where needed
+   ==================================================== */
+
 :root {
-  color-scheme: dark;
+  --brand-dark-blue:   #01367A;
+  --brand-dark-blue-light: #01459e;  /* ~10% lighter */
+  --brand-dark-blue-dark:  #012760;  /* ~10% darker  */
+  --brand-gold:        #C78932;
+  --brand-gold-light:  #d4993e;      /* ~10% lighter */
+  --brand-gold-dark:   #a8721f;      /* ~10% darker  */
+  --brand-light-blue:  #91BFFA;
+  --brand-light-blue-dark: #7aaef5; /* ~10% darker  */
+  --brand-light-gold:  #EBE4CD;
+  --brand-light-gold-dark: #dfd5b8; /* ~10% darker  */
+
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,8 +32,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #030712;
-  color: #f3f4f6;
+  background-color: #ffffff;
+  color: #1e293b;
   overflow-x: hidden;
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -24,17 +44,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #EBE4CD;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: #01367A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00f2fe;
-  box-shadow: 0 0 10px #00f2fe;
+  background: #C78932;
 }
 
 #root {

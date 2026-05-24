@@ -9,7 +9,7 @@
   padding: 130px 24px 80px 24px; /* Spacious top clearing persistent navbar */
   margin: 0;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #1d4ed8 100%); /* Premium corporate blue gradient */
+  background: linear-gradient(135deg, #01367A 0%, #012760 50%, #01183c 100%); /* NSG IT brand dark blue gradient */
   color: #0f172a;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   display: flex;
@@ -30,7 +30,7 @@
   z-index: 0;
   pointer-events: none;
   background-image: 
-    radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.07) 0%, transparent 65%),
+    radial-gradient(circle at 50% 30%, rgba(199, 137, 50, 0.07) 0%, transparent 65%),
     linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
   background-size: 100% 100%, 36px 36px, 36px 36px;
@@ -50,7 +50,7 @@
   left: 10%;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, #4f46e5 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(199, 137, 50, 0.22) 0%, rgba(0,0,0,0) 70%);
 }
 
 .orb-violet {
@@ -58,7 +58,7 @@
   right: 10%;
   width: 360px;
   height: 360px;
-  background: radial-gradient(circle, #7c3aed 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(1, 54, 122, 0.4) 0%, rgba(0,0,0,0) 70%);
 }
 
 .client-portal-container {
@@ -82,7 +82,7 @@
   box-sizing: border-box;
   box-shadow: 
     0 25px 60px rgba(0, 0, 0, 0.3), 
-    0 0 35px rgba(37, 99, 235, 0.15);
+    0 0 35px rgba(199, 137, 50, 0.15);
   animation: cardScaleFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: transform, opacity;
 }
@@ -222,16 +222,16 @@
 }
 
 .portal-text-input:focus {
-  border-color: #2563eb;
+  border-color: #C78932;
   background-color: #ffffff;
   box-shadow: 
-    0 0 10px rgba(37, 99, 235, 0.15),
-    0 0 0 3px rgba(37, 99, 235, 0.15);
+    0 0 10px rgba(199, 137, 50, 0.15),
+    0 0 0 3px rgba(199, 137, 50, 0.15);
 }
 
 .portal-text-input:focus + .input-icon,
 .portal-text-input:focus-within + .input-icon {
-  color: #2563eb;
+  color: #C78932;
 }
 
 .portal-text-input.has-error {
@@ -268,17 +268,17 @@
 }
 
 .submit-auth-btn {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #C78932 0%, #a8721f 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 15px rgba(199, 137, 50, 0.35);
   margin-top: 8px;
 }
 
 .submit-auth-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #5a52ff 0%, #8b4eff 100%);
+  background: linear-gradient(135deg, #d4993e 0%, #C78932 100%);
   box-shadow: 
-    0 6px 20px rgba(99, 102, 241, 0.55),
-    0 0 10px rgba(124, 58, 237, 0.2);
+    0 6px 20px rgba(199, 137, 50, 0.55),
+    0 0 10px rgba(199, 137, 50, 0.2);
   transform: translateY(-1px);
 }
 
@@ -417,7 +417,7 @@
 }
 
 .client-email-highlight {
-  color: #2563eb;
+  color: #C78932;
 }
 
 .portal-feedback-form {
@@ -476,10 +476,10 @@
 }
 
 .service-pill-btn.active {
-  background-color: #2563eb;
-  border-color: #3b82f6;
+  background-color: #C78932;
+  border-color: #d4993e;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 4px 12px rgba(199, 137, 50, 0.25);
 }
 
 /* Interactive Star Rating Block */
@@ -561,7 +561,7 @@
 }
 
 .portal-form-text-input:focus {
-  border-bottom-color: #2563eb;
+  border-bottom-color: #C78932;
 }
 
 .portal-form-textarea-input {
@@ -590,7 +590,7 @@
 }
 
 .portal-form-textarea-input:focus {
-  border-bottom-color: #2563eb;
+  border-bottom-color: #C78932;
 }
 
 /* Two column layout row */
@@ -641,12 +641,12 @@
 }
 
 .portal-form-profile-input:focus {
-  border-bottom-color: #2563eb;
+  border-bottom-color: #C78932;
 }
 
 .portal-form-profile-input:focus ~ .form-input-box-icon,
 .portal-form-profile-input:focus-within ~ .form-input-box-icon {
-  color: #2563eb;
+  color: #C78932;
 }
 
 /* Consents check fields */
@@ -665,7 +665,7 @@
   margin-top: 2px;
   flex-shrink: 0;
   cursor: pointer;
-  accent-color: #2563eb;
+  accent-color: #C78932;
 }
 
 .checkbox-consent-body {
@@ -677,17 +677,17 @@
 
 /* Submit Feedback button styling */
 .submit-feedback-btn {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #C78932 0%, #a8721f 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 15px rgba(199, 137, 50, 0.35);
   margin-top: 10px;
 }
 
 .submit-feedback-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #5a52ff 0%, #8b4eff 100%);
+  background: linear-gradient(135deg, #d4993e 0%, #C78932 100%);
   box-shadow: 
-    0 6px 20px rgba(99, 102, 241, 0.55),
-    0 0 10px rgba(124, 58, 237, 0.2);
+    0 6px 20px rgba(199, 137, 50, 0.55),
+    0 0 10px rgba(199, 137, 50, 0.2);
   transform: translateY(-1px);
 }
 
@@ -800,7 +800,7 @@
 
 .success-primary-btn {
   width: 100%;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #C78932 0%, #a8721f 100%);
   color: #ffffff;
   font-family: inherit;
   font-size: 14.5px;
@@ -810,12 +810,12 @@
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 4px 15px rgba(199, 137, 50, 0.25);
 }
 
 .success-primary-btn:hover {
-  background: linear-gradient(135deg, #5a52ff 0%, #8b4eff 100%);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+  background: linear-gradient(135deg, #d4993e 0%, #C78932 100%);
+  box-shadow: 0 6px 20px rgba(199, 137, 50, 0.45);
   transform: translateY(-1px);
 }
 

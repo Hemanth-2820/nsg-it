@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Mail, MessageSquare, Star, ArrowRight, ShieldCheck, Heart, LogOut, CheckCircle, Briefcase, Building } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import './ClientLogin.css';
 
 const categories = [

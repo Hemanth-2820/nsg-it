@@ -3,7 +3,7 @@
 .digital-journey-section {
   position: relative;
   width: 100%;
-  background-color: #f1f3f9; /* Clean premium off-white/light-grey backdrop matching screenshot */
+  background-color: #EBE4CD;
   padding: 100px 0;
   overflow: hidden;
   box-sizing: border-box;
@@ -24,7 +24,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: #211fe9; /* Premium royal blue */
+  color: #C78932;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   display: inline-block;
@@ -37,13 +37,13 @@
   font-size: clamp(2.8rem, 4.3vw, 4.0rem);
   font-weight: 400;
   line-height: 1.25;
-  color: #0c1445; /* Dark navy */
+  color: #01367A;
   margin: 14px 0 0 0;
   letter-spacing: -0.5px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #211fe9 0%, #aa3bff 100%);
+  background: linear-gradient(135deg, #01367A 0%, #C78932 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -100,7 +100,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: #211fe9;
+  color: #01367A;
   width: 16px;
   display: inline-block;
   line-height: 1;
@@ -110,25 +110,25 @@
   font-family: 'Outfit', 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #5d6785; /* Muted corporate grey-blue */
+  color: #012760;
   transition: all 0.3s ease;
   line-height: 1.4;
 }
 
 /* ACTIVE STATE */
 .journey-menu-btn.active {
-  background-color: rgba(33, 31, 233, 0.04); /* Soft blue highlight */
-  border-left: 3px solid #211fe9; /* Blue bar indicator */
-  margin-left: -2px; /* Correct thickness overlap */
+  background-color: rgba(1, 54, 122, 0.06);
+  border-left: 3px solid #01367A;
+  margin-left: -2px;
 }
 
 .journey-menu-btn.active .journey-btn-text {
-  color: #0c1445; /* Dark navy focus */
+  color: #01367A;
   font-weight: 600;
 }
 
 .journey-menu-btn:hover:not(.active) .journey-btn-text {
-  color: #211fe9; /* Hover brand highlight */
+  color: #C78932;
   transform: translateX(4px);
 }
 
@@ -198,7 +198,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  color: #1a2254; /* Deep rich navy */
+  color: #01367A;
   font-weight: 400;
   margin: 0;
 }
@@ -230,7 +230,7 @@
     border-left: 1px solid rgba(0, 0, 0, 0.05);
   }
   .journey-menu-btn.active {
-    border-left: 3px solid #211fe9;
+    border-left: 3px solid #01367A;
   }
   .journey-right-desc {
     padding-left: 0;

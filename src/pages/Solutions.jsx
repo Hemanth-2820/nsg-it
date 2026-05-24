@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowUpRight, Phone, CheckCircle, Lightbulb, Compass, Settings } from 'lucide-react';
 import { serviceDetailsDataset } from '../components/ServiceDetailPage';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import './Solutions.css';
 
 // Import all assets dynamically to match service capability visuals
@@ -320,7 +320,7 @@ const Solutions = () => {
       <section 
         className="solutions-hero-banner"
         style={{
-          '--solution-accent-color': service.color || '#8B5CF6'
+          '--solution-accent-color': service.color || '#C78932'
         }}
       >
         <div className="solutions-hero-grid">
@@ -412,7 +412,7 @@ const Solutions = () => {
                     className="solution-block-cta-btn" 
                     onClick={() => navigate('/solutions-contact', { state: { subName: sub.name, category: service.category, accentColor: service.color } })}
                     style={{
-                      '--accent-color': service.color || '#8B5CF6'
+                      '--accent-color': service.color || '#C78932'
                     }}
                   >
                     Get in Touch for Details
@@ -430,7 +430,7 @@ const Solutions = () => {
       <section 
         className="solutions-approach-timeline-section"
         style={{
-          '--solution-accent-color': service.color || '#D946EF'
+          '--solution-accent-color': service.color || '#C78932'
         }}
       >
         <div className="approach-section-backdrop"></div>
@@ -458,7 +458,7 @@ const Solutions = () => {
                   className="approach-timeline-axis-progress" 
                   style={{
                     height: `${scrollProgress}%`,
-                    background: `linear-gradient(to bottom, ${service.color || '#D946EF'} 0%, #7c3aed 100%)`
+                    background: `linear-gradient(to bottom, ${service.color || '#C78932'} 0%, #012760 100%)`
                   }}
                 ></div>
 
@@ -478,8 +478,8 @@ const Solutions = () => {
                         <div 
                           className="approach-step-circle-indicator" 
                           style={{
-                            borderColor: isStepActive ? (service.color || '#D946EF') : '#1e293b',
-                            boxShadow: isStepActive ? `0 0 20px ${service.color || '#D946EF'}cc` : 'none',
+                            borderColor: isStepActive ? (service.color || '#C78932') : '#1e293b',
+                            boxShadow: isStepActive ? `0 0 20px ${service.color || '#C78932'}cc` : 'none',
                             backgroundColor: isStepActive ? '#0b0f19' : '#1e293b'
                           }}
                         >

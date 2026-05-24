@@ -36,7 +36,7 @@
   font-family: 'Outfit', 'Inter', sans-serif;
   font-size: 40px;
   font-weight: 700;
-  color: #0c101d;
+  color: #01367A;
   margin: 0 0 16px 0;
   letter-spacing: -0.5px;
 }
@@ -128,8 +128,8 @@
 
 .kpmg-input:focus,
 .kpmg-textarea:focus {
-  border-color: #00338d;
-  box-shadow: 0 0 0 3px rgba(0, 51, 141, 0.1);
+  border-color: #01367A;
+  box-shadow: 0 0 0 3px rgba(1, 54, 122, 0.1);
 }
 
 /* Select wrapper and control */
@@ -143,7 +143,7 @@
   border: 1px solid #cbd5e1;
   border-radius: 4px;
   padding: 12px 40px 12px 16px;
-  color: #00338d; /* Blue text in selection box matching KPMG screenshot */
+  color: #01367A;
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
@@ -153,7 +153,7 @@
   -webkit-appearance: none;
   width: 100%;
   box-sizing: border-box;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300338d' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2301367A' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 15px;
@@ -165,8 +165,8 @@
 }
 
 .kpmg-select:focus {
-  border-color: #00338d;
-  box-shadow: 0 0 0 3px rgba(0, 51, 141, 0.1);
+  border-color: #01367A;
+  box-shadow: 0 0 0 3px rgba(1, 54, 122, 0.1);
 }
 
 .kpmg-select option {
@@ -216,7 +216,7 @@
   margin-top: 3px;
   flex-shrink: 0;
   cursor: pointer;
-  accent-color: #00338d;
+  accent-color: #01367A;
 }
 
 .checkbox-text {
@@ -226,14 +226,14 @@
 }
 
 .kpmg-privacy-link {
-  color: #00338d;
+  color: #01367A;
   text-decoration: underline;
   font-weight: 500;
   transition: color 0.15s ease;
 }
 
 .kpmg-privacy-link:hover {
-  color: #00225d;
+  color: #C78932;
 }
 
 /* Submit Action Button */
@@ -244,7 +244,7 @@
 }
 
 .kpmg-submit-btn {
-  background-color: #00338d;
+  background-color: #C78932;
   color: #ffffff;
   font-family: inherit;
   font-size: 16px;
@@ -253,13 +253,13 @@
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 51, 141, 0.15);
+  box-shadow: 0 4px 12px rgba(199, 137, 50, 0.2);
   transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
 
 .kpmg-submit-btn:hover:not(:disabled) {
-  background-color: #00225d;
-  box-shadow: 0 6px 18px rgba(0, 51, 141, 0.25);
+  background-color: #a8721f;
+  box-shadow: 0 6px 18px rgba(199, 137, 50, 0.35);
 }
 
 .kpmg-submit-btn:active:not(:disabled) {
@@ -346,7 +346,7 @@
   font-family: 'Outfit', 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #00338d;
+  color: #01367A;
   margin: 0 0 16px 0;
   letter-spacing: -0.5px;
 }

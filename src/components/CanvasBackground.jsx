@@ -71,7 +71,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
             vx: (Math.random() - 0.5) * 1.0,
             vy: (Math.random() - 0.5) * 1.0,
             r: Math.random() * 240 + 160,
-            color: Math.random() < 0.5 ? 'rgba(0, 242, 254, 0.08)' : 'rgba(170, 59, 255, 0.08)'
+            color: Math.random() < 0.5 ? 'rgba(199, 137, 50, 0.08)' : 'rgba(1, 54, 122, 0.08)'
           }));
           break;
 
@@ -84,7 +84,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
               vy: (Math.random() - 0.5) * 0.2,
               radius: Math.random() * 2.5 + 1.0,
               opacity: Math.random() * 0.7 + 0.2,
-              color: Math.random() < 0.5 ? '#00f2fe' : '#aa3bff'
+              color: Math.random() < 0.5 ? '#C78932' : '#01367A'
             });
           }
           break;
@@ -98,7 +98,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
               speed: Math.random() * 1.5 + 0.5,
               opacity: Math.random() * 0.4 + 0.1,
               width: Math.random() * 1.5 + 0.5,
-              color: 'rgba(13, 242, 163, '
+              color: 'rgba(199, 137, 50, '
             });
           }
           break;
@@ -110,7 +110,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
               distance: Math.random() * 100 + 150,
               speed: 0.005 + Math.random() * 0.004,
               size: Math.random() * 3 + 1,
-              color: Math.random() < 0.5 ? '#ec4899' : '#00f2fe'
+              color: Math.random() < 0.5 ? '#C78932' : '#EBE4CD'
             });
           }
           break;
@@ -176,7 +176,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
               endY: Math.random() * height,
               t: Math.random(),
               speed: Math.random() * 0.003 + 0.001,
-              color: Math.random() < 0.5 ? '#00f2fe' : '#0df2a3'
+              color: Math.random() < 0.5 ? '#C78932' : '#01367A'
             });
           }
           break;
@@ -203,7 +203,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
               speed: 0.01 + Math.random() * 0.005,
               amplitude: Math.random() * 60 + 30,
               x: Math.random() * width,
-              color: i % 2 === 0 ? '#aa3bff' : '#0df2a3'
+              color: i % 2 === 0 ? '#C78932' : '#01367A'
             });
           }
           break;
@@ -356,7 +356,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
               
               ctx.beginPath();
               ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
-              ctx.fillStyle = `rgba(0, 242, 254, ${opacity})`;
+              ctx.fillStyle = `rgba(199, 137, 50, ${opacity})`;
               ctx.fill();
             });
           }
@@ -370,7 +370,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
                 circle.radius = 0;
               }
               const ratio = (circle.maxRadius - circle.radius) / circle.maxRadius;
-              ctx.strokeStyle = `rgba(13, 242, 163, ${Math.max(0, ratio * 0.16)})`;
+              ctx.strokeStyle = `rgba(199, 137, 50, ${Math.max(0, ratio * 0.16)})`;
               ctx.lineWidth = 1 + (1 - ratio) * 2;
               ctx.beginPath();
               ctx.arc(width / 2, height * 0.55, Math.max(0.1, circle.radius), 0, Math.PI * 2);
@@ -380,7 +380,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
           break;
 
         case 6: // Slide 6: AI & Chatbots - Abstract connected synapse mesh
-          ctx.strokeStyle = 'rgba(170, 59, 255, 0.05)';
+          ctx.strokeStyle = 'rgba(199, 137, 50, 0.05)';
           ctx.lineWidth = 0.8;
           
           particles.forEach((p, idx) => {
@@ -392,7 +392,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
 
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(170, 59, 255, 0.55)';
+            ctx.fillStyle = 'rgba(199, 137, 50, 0.55)';
             ctx.fill();
 
             for (let j = idx + 1; j < particles.length; j++) {
@@ -411,7 +411,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
         case 7: // Slide 7: IVR Solutions - Fourier wave sound signal
           if (extraData.time !== undefined) {
             extraData.time += 0.035;
-            ctx.fillStyle = 'rgba(170, 59, 255, 0.3)';
+            ctx.fillStyle = 'rgba(199, 137, 50, 0.3)';
             
             particles.forEach((p, idx) => {
               const phase1 = Math.sin(p.offset + extraData.time * 0.8) * 110;
@@ -466,10 +466,10 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
 
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = '#ffb800';
+            ctx.fillStyle = '#C78932';
             ctx.globalAlpha = p.opacity * brightness;
             ctx.shadowBlur = 10 * brightness;
-            ctx.shadowColor = '#ffb800';
+            ctx.shadowColor = '#C78932';
             ctx.fill();
             ctx.shadowBlur = 0;
             ctx.globalAlpha = 1.0;
@@ -497,7 +497,7 @@ const CanvasBackgroundInner = ({ activeSlide, state }) => {
               hex.opacity += 0.0003 * hex.alertDir;
               if (hex.opacity > 0.08 || hex.opacity < 0.015) hex.alertDir = -hex.alertDir;
               
-              ctx.strokeStyle = `rgba(255, 45, 85, ${Math.max(0.01, hex.opacity)})`;
+              ctx.strokeStyle = `rgba(199, 137, 50, ${Math.max(0.01, hex.opacity)})`;
               ctx.lineWidth = 0.5;
               ctx.beginPath();
               for (let i = 0; i < 6; i++) {

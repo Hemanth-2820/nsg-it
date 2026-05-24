@@ -1260,6 +1260,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-height: 140px;
   cursor: default;
+  color: #111827; /* Default dark text color */
 }
 
 .cap-tile:hover {
@@ -1278,7 +1279,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #111827;
+  color: inherit; /* Inherit color dynamically from parent */
 }
 
 .cap-tile-icon svg {
@@ -1290,7 +1291,7 @@
   font-family: 'Outfit', 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: #111827;
+  color: inherit; /* Inherit color dynamically from parent */
   text-align: center;
   line-height: 1.3;
 }
@@ -1380,8 +1381,8 @@
 .process-step-block {
   position: relative;
   flex: 1;                        /* all equal width when collapsed */
-  background: #ffffff;
-  border-right: 1px solid #e8eaf0;
+  background: #EBE4CD;            /* Brand Light Gold when collapsed */
+  border-right: 1px solid rgba(1, 54, 122, 0.12); /* Subtle corporate border */
   overflow: hidden;
   transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1),
               background 0.35s ease;
@@ -1397,7 +1398,11 @@
 /* Expanded: grows to ~3.5× a collapsed block */
 .process-step-block.process-step-expanded {
   flex: 3.5;
-  background: #ffffff;
+  background: #91BFFA;            /* Expanded changes to Brand Light Blue */
+}
+
+.process-step-block.process-step-expanded .process-activities-label {
+  color: #01367A;                 /* Dark Blue for high contrast on light blue background */
 }
 
 /* ─── Collapsed Label (rotated) ─────────────────────────────── */
@@ -1425,7 +1430,7 @@
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: var(--step-color, #6366f1);
+  color: #01367A; /* Dark Blue for high contrast on collapsed light gold background */
   margin-bottom: 16px;
   display: block;
 }
@@ -1434,7 +1439,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #374151;
+  color: #01367A; /* Dark Blue for high contrast on collapsed light gold background */
   white-space: nowrap;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -1481,7 +1486,7 @@
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 4px;
-  color: var(--step-color, #6366f1);
+  color: var(--step-color, #C78932);
   margin-bottom: 12px;
   display: block;
   flex-shrink: 0;
@@ -1543,7 +1548,7 @@
 .process-check-icon {
   width: 20px;
   height: 20px;
-  color: var(--step-color, #6366f1);
+  color: var(--step-color, #C78932);
   flex-shrink: 0;
 }
 
@@ -1562,9 +1567,9 @@
     height: 68px;
     align-items: center;
     border-right: none;
-    border-bottom: 1px solid #e8eaf0;
+    border-bottom: 1px solid rgba(1, 54, 122, 0.12); /* Subtle corporate border */
     transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-                background 0.3s ease;
+                background 0.35s ease;
   }
   .process-step-block.process-step-expanded {
     height: 420px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CorporateValueSection.css';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 
 const blocksData = [
   {

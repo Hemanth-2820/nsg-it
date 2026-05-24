@@ -28,109 +28,109 @@ const slides = [
   {
     title: "Crafting Immersive, High-Performance Digital Flagships",
     theme: "web-development",
-    color: "#d946ef",
+    color: "#C78932",
     icon: <Sparkles />,
     image: themeWebDevImg,
-    fallbackGradient: "linear-gradient(135deg, #0c0812 0%, #1f112c 100%)",
+    fallbackGradient: "linear-gradient(135deg, #01367A 0%, #01183c 100%)",
     styleSlug: "gaussian-vaporize"
   },
   {
     title: "Engineering Multi-Platform Mobile Experiences with Native Precision",
     theme: "app-development",
-    color: "#ffb800",
+    color: "#EBE4CD",
     icon: <Layers />,
     image: appDevThemeImg,
-    fallbackGradient: "linear-gradient(135deg, #090c10 0%, #2b1f02 100%)",
+    fallbackGradient: "linear-gradient(135deg, #012760 0%, #01183c 100%)",
     styleSlug: "vertical-wipe"
   },
   {
     title: "Architecting Scalable Core Engines for Modern Enterprise Operations",
     theme: "software-development",
-    color: "#00f2fe",
+    color: "#C78932",
     icon: <Database />,
     image: softwareDevThemeImg,
-    fallbackGradient: "linear-gradient(135deg, #020914 0%, #08233f 100%)",
+    fallbackGradient: "linear-gradient(135deg, #a8721f 0%, #01183c 100%)",
     styleSlug: "slide-left"
   },
   {
     title: "Orchestrating Elastic Cloud Clusters & Automated DevOps Loops",
     theme: "aws-devops",
-    color: "#ec4899",
+    color: "#EBE4CD",
     icon: <RefreshCw />,
     image: themeAwsDevopsImg,
-    fallbackGradient: "linear-gradient(135deg, #090314 0%, #290a3a 100%)",
+    fallbackGradient: "linear-gradient(135deg, #01367A 0%, #012760 100%)",
     styleSlug: "letter-cascade"
   },
   {
     title: "Sustaining High-Availability Cloud Fabrics & Distributed Node Clusters",
     theme: "hosting-servers",
-    color: "#818cf8",
+    color: "#C78932",
     icon: <Cloud />,
     image: themeHostingServersImg,
-    fallbackGradient: "linear-gradient(135deg, #0b061d 0%, #170d3a 100%)",
+    fallbackGradient: "linear-gradient(135deg, #01183c 0%, #01367A 100%)",
     styleSlug: "zoom-portal"
   },
   {
     title: "Amplifying Brand Telemetry & Dynamic Market Penetration",
     theme: "digital-marketing",
-    color: "#0df2a3",
+    color: "#EBE4CD",
     icon: <Radio />,
     image: themeDigitalMarketingImg,
-    fallbackGradient: "linear-gradient(135deg, #020f12 0%, #092e2c 100%)",
+    fallbackGradient: "linear-gradient(135deg, #a8721f 0%, #012760 100%)",
     styleSlug: "skew-drift"
   },
   {
     title: "Pioneering Cognitive AI Agents & Intelligent Retrieval Networks",
     theme: "ai-rag-chatbots",
-    color: "#aa3bff",
+    color: "#C78932",
     icon: <Brain />,
     image: themeAiRagImg,
-    fallbackGradient: "linear-gradient(135deg, #050515 0%, #0d1b3e 100%)",
+    fallbackGradient: "linear-gradient(135deg, #01367A 0%, #01183c 100%)",
     styleSlug: "split-mergers"
   },
   {
     title: "Forging Interactive Voice Response Grids & Seamless Soundscapes",
     theme: "ivr-solutions",
-    color: "#a855f7",
+    color: "#EBE4CD",
     icon: <Cpu />,
     image: themeIvrSolutionsImg,
-    fallbackGradient: "linear-gradient(135deg, #000000 0%, #20042d 100%)",
+    fallbackGradient: "linear-gradient(135deg, #012760 0%, #01183c 100%)",
     styleSlug: "cyber-glitch"
   },
   {
     title: "Unifying Decentralized Enterprise Systems with Seamless Data Bridges",
     theme: "api-integrations",
-    color: "#10b981",
+    color: "#C78932",
     icon: <Lock />,
     image: themeApiIntegrationsImg,
-    fallbackGradient: "linear-gradient(135deg, #020c08 0%, #0a2717 100%)",
+    fallbackGradient: "linear-gradient(135deg, #a8721f 0%, #01183c 100%)",
     styleSlug: "roller-carousel"
   },
   {
     title: "Catalyzing Global Digital Commerce Ecosystems with Secure Transaction Grids",
     theme: "ecommerce-solutions",
-    color: "#ff2d55",
+    color: "#EBE4CD",
     icon: <Shield />,
     image: themeEcommerceImg,
-    fallbackGradient: "linear-gradient(135deg, #0a0a0f 0%, #1e1115 100%)",
+    fallbackGradient: "linear-gradient(135deg, #01367A 0%, #012760 100%)",
     styleSlug: "3d-flip"
   },
   {
     title: "Driving Hyper-Efficient Process Automation & Cognitive Workflows",
     theme: "ai-automation",
-    color: "#aa3bff",
+    color: "#C78932",
     icon: <Brain />,
     image: themeAiAutomationImg,
-    fallbackGradient: "linear-gradient(135deg, #050515 0%, #0d1b3e 100%)",
+    fallbackGradient: "linear-gradient(135deg, #01183c 0%, #01367A 100%)",
     styleSlug: "split-mergers"
   },
   {
     title: "Enforcing Zero-Trust Isolation Architecture & Persistent Asset Maintenance",
     theme: "security-maintenance",
-    color: "#ff2d55",
+    color: "#EBE4CD",
     icon: <Shield />,
     image: themeSecurityImg,
-    fallbackGradient: "linear-gradient(135deg, #0a0a0f 0%, #1e1115 100%)",
+    fallbackGradient: "linear-gradient(135deg, #a8721f 0%, #012760 100%)",
     styleSlug: "3d-flip"
   }
 ];
