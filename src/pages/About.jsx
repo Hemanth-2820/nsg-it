@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import aboutImage from '../assets/about-us.jpg';
 import founderImage from '../assets/founder.png';
-import ceoImage from '../assets/ceo.png';
+
 import teamImage from '../assets/team.png';
 import softwareOfficeImage from '../assets/office_innovation_hub.png';
 import itWorkspaceImage from '../assets/office_collaboration_zone.png';
@@ -96,26 +96,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* CEO Profile Row */}
-          <div className="leadership-profile-row ceo-row alternating">
-            <div className="profile-image-container">
-              <div className="profile-image-frame">
-                <img src={ceoImage} alt="NSG Solutions CEO" className="profile-image" />
-              </div>
-            </div>
-            <div className="profile-text-content">
-              <span className="profile-role">CEO</span>
-              <blockquote className="profile-quote">
-                "Our CEO is a forward-thinking leader driven by innovation, intelligence, and strategic vision."
-              </blockquote>
-              <p className="profile-paragraph">
-                He architects technology-driven solutions that create measurable business impact while steering the organization toward digital transformation. With a strong emphasis on precision and future-readiness, he enables businesses to navigate complexity and evolve in an ever-changing technological landscape.
-              </p>
-              <p className="profile-paragraph">
-                With deep expertise in Artificial Intelligence (AI), Machine Learning (ML), and the Internet of Things (IoT), he plays a pivotal role in building intelligent, scalable, and future-ready solutions—empowering organizations to unlock new opportunities and achieve sustainable growth.
-              </p>
-            </div>
-          </div>
 
           {/* Team Showcase Section */}
           <div className="about-team-showcase">
