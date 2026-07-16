@@ -14,7 +14,7 @@
 
 .popup-content {
   position: relative;
-  max-width: 650px; /* Decreased from 900px so navbar is visible */
+  max-width: 750px; /* Increased slightly */
   width: 100%;
   background: #fdfbf7;
   border: 4px solid #0b3979;
