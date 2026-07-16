@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Popup from './components/Popup';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -11,6 +12,8 @@ import Blogs from './pages/Blogs';
 import Solutions from './pages/Solutions';
 import SolutionsContact from './pages/SolutionsContact';
 import ClientLogin from './pages/ClientLogin';
+import Terms from './pages/Terms';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import './App.css';
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
       <div className="app-workspace">
         {/* NAVBAR - persistent header across all routes */}
         <Navbar />
+
+        {/* Global Popup */}
+        <Popup />
 
         {/* Dynamic Route Pages governed by React Router */}
         <Routes>
@@ -34,6 +40,8 @@ function App() {
           <Route path="/solutions/:id" element={<Solutions />} />
           <Route path="/solutions-contact" element={<SolutionsContact />} />
           <Route path="/client-login" element={<ClientLogin />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </Router>

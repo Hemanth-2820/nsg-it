@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="contact-detail-row">
               <Phone className="contact-row-icon" size={15} />
               <p className="contact-row-text">
-                <a href="tel:+918049123000">+91 80 4912 3000</a>
+                <a href="tel:+917349525471">+91 7349525471</a>, <a href="tel:+919676003000">+91 9676003000</a>
               </p>
             </div>
 
@@ -77,13 +77,7 @@ const Footer = () => {
               <div className="contact-detail-row">
                 <Mail className="contact-row-icon" size={14} />
                 <p className="contact-row-text">
-                  <a href="mailto:sales@nsg-it.com">sales@nsg-it.com</a>
-                </p>
-              </div>
-              <div className="contact-detail-row">
-                <Mail className="contact-row-icon" size={14} />
-                <p className="contact-row-text">
-                  <a href="mailto:info@nsg-it.com">info@nsg-it.com</a>
+                  <a href="mailto:info@nsgsolutions.in">info@nsgsolutions.in</a>
                 </p>
               </div>
             </div>
@@ -108,9 +102,9 @@ const Footer = () => {
 
         {/* Policy Links */}
         <div className="footer-bottom-policy-links">
-          <Link to="/contact#privacy">Terms of use</Link>
+          <Link to="/terms">Terms of use</Link>
           <span className="policy-bullet-separator">•</span>
-          <Link to="/contact#privacy">Privacy Policy</Link>
+          <Link to="/privacy">Privacy Policy</Link>
           <span className="policy-bullet-separator">•</span>
           <Link to="/contact#sitemap">Sitemap</Link>
         </div>
