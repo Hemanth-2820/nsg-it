@@ -279,8 +279,8 @@ const Contact = () => {
                 Bangalore, Karnataka 560102, India
               </p>
               <div className="location-contact-info">
-                <p><strong>Email:</strong> india@nsg-it.com</p>
-                <p><strong>Phone:</strong> +91 80 4912 3000</p>
+                <p><strong>Email:</strong> info@nsgsolutions.in</p>
+                <p><strong>Phone:</strong> +91 7349525471, +91 9676003000</p>
                 <p><strong>Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM IST</p>
               </div>
               
